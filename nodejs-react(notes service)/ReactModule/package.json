@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "lint-staged": "^13.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
+  },
+  "scripts": {
+    "test": "cd app && prettier --write ./src && git add . && npm run test",
+    "prepare": "husky install"
+  }
+}
