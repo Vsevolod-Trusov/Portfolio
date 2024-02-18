@@ -1,0 +1,2 @@
+alter pluggable database pdbname open
+alter pluggable database pdbname save state
