@@ -1,0 +1,47 @@
+@import 'mixins.scss';
+
+footer {
+  display: flex;
+  justify-content: center;
+
+  background: #faf9f8;
+  height: 77px;
+  bottom: 0;
+}
+
+.mc-visa-icons-and-support-info {
+  display: flex;
+  column-gap: 29%;
+}
+
+.mc-visa-icons-and-support-info-size {
+  width: 52%;
+}
+
+.footer-icons-container {
+  display: flex;
+  column-gap: 26%;
+  padding-top: 11px;
+  img {
+    width: 39px;
+    height: 27px;
+  }
+}
+
+.footer-info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-info-container-font-style {
+  @include font-face(Monserrat, 14px, 1em, #b3b3b3, 0, 400);
+}
+
+.footer-info-container :first-child {
+  margin: 5px 0 0 10px;
+}
+
+.footer-info-container :last-child {
+  margin-top: 12px;
+  text-align: left;
+}

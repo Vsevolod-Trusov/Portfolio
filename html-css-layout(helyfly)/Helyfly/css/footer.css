@@ -1,0 +1,65 @@
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #faf9f8;
+  height: 77px;
+  bottom: 0;
+}
+
+.mc-visa-icons-and-support-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 29%;
+  -moz-column-gap: 29%;
+  column-gap: 29%;
+}
+
+.mc-visa-icons-and-support-info-size {
+  width: 52%;
+}
+
+.footer-icons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 26%;
+  -moz-column-gap: 26%;
+  column-gap: 26%;
+  padding-top: 11px;
+}
+
+.footer-icons-container img {
+  width: 39px;
+  height: 27px;
+}
+
+.footer-info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.footer-info-container-font-style {
+  font-family: Monserrat, sans-serif;
+  line-height: 1em;
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+.footer-info-container :first-child {
+  margin: 5px 0 0 10px;
+}
+
+.footer-info-container :last-child {
+  margin-top: 12px;
+  text-align: left;
+}

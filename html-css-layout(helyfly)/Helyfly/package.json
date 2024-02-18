@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "prettier": "2.8.4"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "printWidth": 80,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "useTabs": false,
+    "bracketSpacing": true
+  }
+}
