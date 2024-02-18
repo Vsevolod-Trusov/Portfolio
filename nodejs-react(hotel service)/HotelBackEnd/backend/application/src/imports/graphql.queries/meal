@@ -1,0 +1,94 @@
+#create
+mutation createMeal($meal: MealInput!) {
+  createMeal(createMeal: $meal) {
+    mealName,
+    mealDescription,
+    mealPrice
+  }
+}
+
+{
+  "meal": {
+    "mealName": "Pumpkin Pie Latte",
+    "mealPrice": 3.25,
+    "mealDescription": "tasty latte"
+  }
+}
+
+#get meal
+query getMeals{
+  getAllMeals{
+    mealName,
+    mealPrice,
+    mealDescription
+  }
+}
+
+#order meal
+mutation orderMeal($order: OrderMealInput!) {
+  createOrderMeal(createOrder: $order) {
+    _id,
+    mealsAmount,
+    orderPrice,
+    inRoom,
+    meals,
+    tableNumber,
+    userLogin
+  }
+}
+
+{
+  "order": {
+    "mealsAmount": [1,2],
+    "orderPrice": 5.25,
+    "inRoom": true,
+    "meals": ["meal1", "meal2"],
+    "tableNumber": "table-001",
+    "userLogin": "vsevolod"
+  }
+}
+
+#get book time
+query getBookTimes($tableNumber: String!, $bookDate: String!) {
+  getBookTimes(tableNumber: $tableNumber, bookDate: $bookDate){
+    key,
+    value
+  }
+}
+
+{
+  "tableNumber": "1",
+  "bookDate": "2023-04-17"
+}
+
+#get all meal orders
+query orders{
+  getAllMealOrders{
+    _id,
+    mealsAmount,
+    meals,
+    orderPrice,
+    inRoom,
+    tableNumber,
+    bookDate,
+    bookTime,
+    userLogin,
+  }
+}
+
+#delete order meal
+mutation deleteMealOrder($id:String!) {
+  deleteOneMealOrder(orderId: $id) {
+    acknowledged,
+    deletedCount
+  }
+}
+
+#update meal
+mutation updateMeal($meal:MealInput!) {
+  updateMeal(meal: $meal) {
+    mealName,
+    mealPrice,
+    mealDescription
+  }
+}

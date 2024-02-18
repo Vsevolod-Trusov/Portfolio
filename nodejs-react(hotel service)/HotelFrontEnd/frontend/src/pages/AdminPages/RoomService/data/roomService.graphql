@@ -1,0 +1,28 @@
+query getServices{
+    getAllRoomServices{
+        serviceName,
+        servicePrice,
+        serviceDescription
+    }
+}
+
+mutation updateService($service: RoomServiceInput!){
+    updateRoomService(service:$service){
+        serviceName
+    }
+}
+
+mutation deleteService($name: String!) {
+    deleteOneRoomService(serviceName: $name){
+        acknowledged,
+        deletedCount
+    }
+}
+
+mutation createRoomService($createRoomService: RoomServiceInput!) {
+    createRoomService(createRoomService: $createRoomService){
+        serviceName,
+        servicePrice,
+        serviceDescription
+    }
+}

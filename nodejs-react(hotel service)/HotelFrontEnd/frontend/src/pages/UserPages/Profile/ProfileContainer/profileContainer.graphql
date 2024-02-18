@@ -1,0 +1,15 @@
+query isSubscribed($token: String!) {
+    getIsSubscribed(token: $token)
+}
+
+mutation subscribe($token: String!) {
+    subscribeOnNews(token: $token) {
+        subscribedOnNews
+    }
+}
+
+mutation unsubscribe($token: String!) {
+    unsubscribeOnNews(token: $token) {
+        subscribedOnNews
+    }
+}

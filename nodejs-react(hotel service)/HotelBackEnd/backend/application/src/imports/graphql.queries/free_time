@@ -1,0 +1,33 @@
+#create hobby
+mutation createHobby ($hobby: FreeTimeInfoInput!) {
+  createHobby(createHobby: $hobby) {
+    leisureName,
+    price,
+    description
+  }
+}
+
+{
+  "hobby": {
+    "leisureName": "De L'Europe Gym",
+    "price": 0.0,
+    "description": "Lots of different trainers. Various training programs as well as polite and professional staff"
+  }
+}
+
+#get hobby info
+query getHobby {
+  getAllHobbies {
+    leisureName,
+    price,
+    description
+  }
+}
+
+#delete hobby
+mutation deleteOneHobby($name:String!) {
+  deleteOneHobby(hobbyName: $name){
+    acknowledged,
+    deletedCount
+  }
+}

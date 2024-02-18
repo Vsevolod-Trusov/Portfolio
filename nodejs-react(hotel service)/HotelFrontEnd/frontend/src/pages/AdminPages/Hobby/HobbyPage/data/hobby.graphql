@@ -1,0 +1,30 @@
+query hobbies{
+    getAllHobbies{
+        leisureName,
+        description,
+        price
+    }
+}
+
+mutation changeHobby($hobby: FreeTimeInfoInput!){
+    changeHobby(hobby: $hobby){
+        leisureName,
+        description
+        price
+    }
+}
+
+mutation deleteOneHobby($name:String!) {
+    deleteOneHobby(hobbyName: $name){
+        acknowledged,
+        deletedCount
+    }
+}
+
+mutation createHobby ($hobby: FreeTimeInfoInput!) {
+    createHobby(createHobby: $hobby) {
+        leisureName
+    }
+}
+
+

@@ -1,0 +1,10 @@
+mutation createTour($tour: TourInput!) {
+    createTour(createTour: $tour) {
+        tourName,
+        description,
+        startDate,
+        endDate,
+        tourPrice
+    }
+}
+

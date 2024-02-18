@@ -1,0 +1,5 @@
+mutation createNews($news: NewsInput!) {
+    createNews(news: $news){
+        newsHeader
+    }
+}

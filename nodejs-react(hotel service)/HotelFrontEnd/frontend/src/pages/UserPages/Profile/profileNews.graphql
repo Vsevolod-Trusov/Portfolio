@@ -1,0 +1,23 @@
+subscription pubSub {
+    createNews{
+        _id,
+        newsHeader,
+        newsContent,
+        newsDate,
+        newsImage{
+            imagePath
+        }
+    }
+}
+
+query getLastNews {
+    getLastNews{
+        _id,
+        newsHeader,
+        newsContent,
+        newsDate,
+        newsImage{
+            imagePath
+        }
+    }
+}

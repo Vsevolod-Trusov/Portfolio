@@ -1,0 +1,56 @@
+#Create user
+# Write your query or mutation here
+mutation createUser($user: UserInput!) {
+  createUser(createUser: $user) {
+    login
+    email
+    avatar {
+      imagePath
+    }
+    subscribedOnNews
+  }
+}
+{
+  "user": {
+    "login": "Tom",
+    "password": "qwerty",
+    "email": "tom",
+    "role": "user"
+  }
+}
+#Create user
+
+
+#Get user
+query getOneUser($login: String!){
+  getOneUser(login: $login) {
+ 		login
+}
+}
+
+{
+	"login": "vsevolod"
+}
+
+{
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvbUBtYWlsLnJ1IiwibG9naW4iOiJUb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY4MDE5MTI1MCwiZXhwIjoxNjgwMTkxMzEwfQ.xX8BdK9xf8oVRfAM72iuGzTcTpmqlKhhw_TX1wZ6qes"}
+#Create user
+
+#Login user
+mutation loginUser($user: UserInput!) {
+  loginUser(userInput: $user) {
+    accessToken,
+    login
+  }
+}
+
+{
+  "user": {
+    "login": "vsevolod",
+    "password": "Seva2002",
+    "email": "vsevolod_trusov_00@mail.ru"
+  }
+}
+#Login user
+
+

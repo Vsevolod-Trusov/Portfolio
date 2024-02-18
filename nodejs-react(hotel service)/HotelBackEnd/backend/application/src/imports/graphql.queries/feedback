@@ -1,0 +1,25 @@
+#create feedback
+mutation createFeedback($feedback: FeedbackInput! ){
+  createFeedback (createFeedback:$feedback) {
+    userLogin,
+    review,
+    estimation
+  }
+}
+
+{
+  "feedback": {
+    "userLogin": "vsevolod",
+    "review": "test feedback",
+    "estimation": 5
+  }
+}
+
+#get feedbacks
+query getFeedbacks {
+  getAllFeedbacks {
+    userLogin,
+    review,
+    estimation
+  }
+}

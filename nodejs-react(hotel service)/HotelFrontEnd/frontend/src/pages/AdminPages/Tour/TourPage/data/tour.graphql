@@ -1,0 +1,45 @@
+query tours{
+    getAllTours{
+        tourName,
+        tourPrice,
+        startDate,
+        endDate,
+        description
+    }
+}
+
+query tourOrders{
+    getAllOrderTours{
+        _id,
+        tourName,
+        peopleAmount,
+        orderPrice,
+        tourDate,
+        userLogin
+    }
+}
+
+mutation updateTour($tour: TourInput!) {
+    updateTour(tour: $tour) {
+        tourName,
+        tourPrice
+        description,
+        startDate,
+        endDate
+    }
+}
+
+
+mutation deleteOneTour($name: String!) {
+    deleteOneTour(tourName: $name){
+        acknowledged,
+        deletedCount
+    }
+}
+
+mutation deleteTourOrder($id:String!) {
+    deleteOneTourOrder(orderId: $id){
+        acknowledged,
+        deletedCount
+    }
+}

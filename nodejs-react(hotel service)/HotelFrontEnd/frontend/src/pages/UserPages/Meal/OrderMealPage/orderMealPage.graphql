@@ -1,0 +1,14 @@
+query getAllTables {
+    getAllTables{
+        tableNumber,
+        status,
+        amountSeats
+    }
+}
+
+query getBookTimes($tableNumber: String!, $bookDate: String!) {
+    getBookTimes(tableNumber: $tableNumber, bookDate: $bookDate){
+        key,
+        value
+    }
+}

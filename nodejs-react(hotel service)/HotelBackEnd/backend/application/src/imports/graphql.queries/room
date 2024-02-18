@@ -1,0 +1,100 @@
+#Create room
+mutation createRoom($room: RoomInput!) {
+  createRoom(createRoom: $room) {
+    roomNumber
+    roomType{
+      type,
+      basePrice,
+      amountBed
+    }
+    status
+  }
+}
+
+{
+  "room": {
+    "roomNumber": "Room-001",
+    "roomType": {"type": "deluxe",
+      "basePrice": 15.25,
+      "amountBed": 4},
+    "status": "free"
+  }
+}
+
+{
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvbUBtYWlsLnJ1IiwibG9naW4iOiJUb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY4MDE5MTI1MCwiZXhwIjoxNjgwMTkxMzEwfQ.xX8BdK9xf8oVRfAM72iuGzTcTpmqlKhhw_TX1wZ6qes"}
+#Create room
+
+#Get rooms to book
+query getRoomsToBook($startDate: String!,
+  $finishDate: String!,
+	$adultsAmount: String!
+){
+  getRoomTypesToBook(startDate: $startDate, finishDate: $finishDate,
+  adultsAmount: $adultsAmount){
+
+      type,
+      basePrice
+
+  }
+}
+
+{
+  "startDate": "2023-04-12",
+  "finishDate": "2023-04-29",
+  "adultsAmount": "1"
+}
+
+{
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvbUBtYWlsLnJ1IiwibG9naW4iOiJUb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY4MDE5MTI1MCwiZXhwIjoxNjgwMTkxMzEwfQ.xX8BdK9xf8oVRfAM72iuGzTcTpmqlKhhw_TX1wZ6qes"}
+#Get rooms to book
+
+#Create room service
+mutation createRoomService($createRoomService: RoomServiceInput!) {
+  createRoomService(createRoomService: $createRoomService){
+    serviceName,
+    servicePrice,
+    serviceDescription
+  }
+}
+
+{
+  "createRoomService": {
+    "serviceName": "First Breakfast",
+    "servicePrice": 35.25,
+    "serviceDescription": "After a hard road, you will have a wonderful breakfast in your room."
+  }
+}
+
+{
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvbUBtYWlsLnJ1IiwibG9naW4iOiJUb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY4MDE5MTI1MCwiZXhwIjoxNjgwMTkxMzEwfQ.xX8BdK9xf8oVRfAM72iuGzTcTpmqlKhhw_TX1wZ6qes"}
+#Create room service
+
+
+#get all rooms
+query room {
+  getAllRooms {
+    roomNumber,
+    roomType{
+      type,
+      basePrice,
+      amountBed
+    }
+  }
+}
+
+#get all order rooms
+query orders{
+  getAllOrderRooms{
+    _id,
+    roomNumber,
+    roomType,
+    peopleAmount,
+    checkInDate,
+    exitDate,
+    roomServices,
+    orderPrice,
+    userLogin
+
+  }
+}

@@ -1,0 +1,39 @@
+#create table
+mutation createTable($table: PlaceTableInput!) {
+  createTable(createTable: $table) {
+    tableNumber,
+    status,
+    amountSeats,
+    availabilitySchedule{
+      date,
+      bookTimes{
+        key,
+        value
+      }
+    }
+  }
+}
+
+{
+  "table": {
+    "tableNumber": "12",
+    "status": "free",
+    "amountSeats": 4
+  }
+}
+
+#get tables
+query getAllTables {
+  getAllTables{
+    tableNumber,
+    status,
+    amountSeats,
+    availabilitySchedule{
+      date,
+    	bookTimes{
+        key,
+        value
+      }
+    }
+  }
+}

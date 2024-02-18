@@ -1,0 +1,52 @@
+query meals{
+    getAllMeals{
+        mealName,
+        mealPrice,
+        mealDescription
+    }
+}
+
+query mealOrders{
+    getAllMealOrders{
+        _id,
+        mealsAmount,
+        meals,
+        orderPrice,
+        inRoom,
+        tableNumber,
+        bookDate,
+        bookTime,
+        userLogin,
+    }
+}
+
+mutation deleteMealOrder($id:String!) {
+    deleteOneMealOrder(orderId: $id) {
+        acknowledged,
+        deletedCount
+    }
+}
+
+mutation deleteMeal($name:String!) {
+    deleteOneMeal(mealName: $name) {
+        acknowledged,
+        deletedCount
+    }
+}
+
+mutation updateMeal($meal:MealInput!) {
+    updateMeal(meal: $meal) {
+        mealName,
+        mealPrice,
+        mealDescription
+    }
+}
+
+mutation createMeal($meal: MealInput!) {
+    createMeal(createMeal: $meal) {
+        mealName,
+        mealDescription,
+        mealPrice
+    }
+}
+

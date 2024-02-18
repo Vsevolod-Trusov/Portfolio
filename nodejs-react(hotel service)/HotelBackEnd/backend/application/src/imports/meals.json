@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "643baae03729457b8442fe76"
+  },
+  "mealName": "Sour Cream-Lemon Pie",
+  "mealDescription": "tasty lemon pie",
+  "mealPrice": 5.25
+},{
+  "_id": {
+    "$oid": "643babcf3729457b8442fe78"
+  },
+  "mealName": "Orange chicken",
+  "mealDescription": "chicken, rice and vegetables",
+  "mealPrice": 10.25
+},{
+  "_id": {
+    "$oid": "643bac8c3729457b8442fe7a"
+  },
+  "mealName": "Pumpkin Pie Latte",
+  "mealDescription": "tasty latte",
+  "mealPrice": 3.25
+}]

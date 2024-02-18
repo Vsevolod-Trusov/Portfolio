@@ -1,0 +1,6 @@
+query getRole($token: String!){
+    getRole(token: $token) {
+        role,
+        login
+    }
+}

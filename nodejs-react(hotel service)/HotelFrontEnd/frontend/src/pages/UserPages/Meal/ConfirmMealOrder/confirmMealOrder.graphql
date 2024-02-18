@@ -1,0 +1,5 @@
+mutation orderMeal($order: OrderMealInput!, $token: String!) {
+    createOrderMeal(createOrder: $order, token: $token) {
+        _id
+    }
+}

@@ -1,0 +1,10 @@
+query getRoomsToBook($startDate: String!,
+    $finishDate: String!,
+    $adultsAmount: String!
+){
+    getRoomTypesToBook(startDate: $startDate, finishDate: $finishDate,
+        adultsAmount: $adultsAmount){
+        type,
+        basePrice
+    }
+}

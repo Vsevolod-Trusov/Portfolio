@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "6437e708512739fe90361996"
+  },
+  "serviceName": "First Breakfast",
+  "servicePrice": 35.25,
+  "serviceDescription": "After a hard road, you will have a wonderful breakfast in your room.",
+  "orderRooms": []
+},{
+  "_id": {
+    "$oid": "6437e770512739fe90361998"
+  },
+  "serviceName": "Birthday celebration",
+  "servicePrice": 100,
+  "serviceDescription": "A birthday to never forget. Experience turning a year older within the world of Original Amsterdam Luxury.",
+  "orderRooms": []
+},{
+  "_id": {
+    "$oid": "6437e794512739fe9036199a"
+  },
+  "serviceName": "Anniversary",
+  "servicePrice": 85,
+  "serviceDescription": "Amsterdam - will create the perfect picturesque backdrop for any celebration. And we will help you create memories for a lifetime.",
+  "orderRooms": []
+}]

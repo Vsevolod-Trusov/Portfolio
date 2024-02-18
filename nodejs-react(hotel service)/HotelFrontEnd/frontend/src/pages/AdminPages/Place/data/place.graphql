@@ -1,0 +1,32 @@
+query getTables{
+    getAllTables{
+        tableNumber
+        amountSeats,
+    }
+}
+
+mutation deleteTable($number: String!) {
+    deleteOneTable(tableNumber: $number) {
+        acknowledged,
+        deletedCount
+    }
+}
+
+mutation updateTable($table: PlaceTableInput!) {
+    updateTable(table: $table){
+        tableNumber,
+        amountSeats
+    }
+}
+
+query getAmountTables{
+    getAmountTables
+}
+
+mutation createTable($table: PlaceTableInput!) {
+    createTable(createTable: $table){
+        tableNumber,
+        status,
+        amountSeats
+    }
+}

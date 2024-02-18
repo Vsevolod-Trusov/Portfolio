@@ -1,0 +1,9 @@
+query getAllTours {
+    getAllTours{
+        tourName,
+        tourPrice,
+        description,
+        startDate,
+        endDate
+    }
+}

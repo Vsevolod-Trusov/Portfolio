@@ -1,0 +1,81 @@
+#create tour
+mutation createTour($tour: TourInput!) {
+  createTour(createTour: $tour) {
+    tourName,
+    description,
+    startDate,
+  	endDate,
+    tourPrice
+  }
+}
+
+{
+  "tour": {
+    "tourName": "Amsterdam: hop-on and hop-off bus tour",
+    "startDate": "2023-04-18",
+    "endDate": "2024-04-18",
+    "description": "Boarding the bus is possible at any of the ten stops located in the city center. Turn on the audio guide and choose one of 16 languages to learn interesting facts about the city and its attractions during the trip. You can also go to Gassan Diamonds for a free tour of the jewelry store",
+    "tourPrice": 5.25
+  }
+}
+
+#create order
+mutation orderTour($order: OrderTourInput!) {
+  createOrderTour(createOrderTour: $order){
+    tourName,
+    peopleAmount,
+    orderPrice,
+    tourDate,
+    userLogin
+  }
+}
+
+{
+  "order": {
+    "tourName": "Amsterdam: hop-on and hop-off bus tour",
+    "peopleAmount": 1,
+    "orderPrice":5.25,
+    "tourDate": "2023-04-18",
+    "userLogin": "vsevolod"
+  }
+}
+
+#get all tours
+query getAllTours {
+  getAllTours{
+    tourName,
+    tourPrice,
+    description,
+    startDate,
+    endDate
+  }
+}
+
+
+#get all order tours
+query tourOrder{
+  getAllOrderTours{
+ 		_id,
+    tourName,
+    peopleAmount,
+    orderPrice,
+    tourDate,
+    userLogin
+	}
+}
+
+#delete tour
+mutation deleteOneTour($name: String!) {
+  deleteOneTour(tourName: $name){
+    acknowledged,
+    deletedCount
+  }
+}
+
+#delete tour order
+mutation deleteTourOrder($id:String!) {
+  deleteOneTourOrder(orderId: $id){
+    acknowledged,
+    deletedCount
+  }
+}

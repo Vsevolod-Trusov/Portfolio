@@ -1,0 +1,7 @@
+query getHobby {
+    getAllHobbies {
+        leisureName,
+        price,
+        description
+    }
+}

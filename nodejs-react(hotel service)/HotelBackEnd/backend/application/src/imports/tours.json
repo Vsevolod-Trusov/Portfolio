@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "6442cd93ea9f305e34d38f74"
+  },
+  "tourName": "Amsterdam: hop-on and hop-off bus tour",
+  "description": "Boarding the bus is possible at any of the ten stops located in the city center. Turn on the audio guide and choose one of 16 languages to learn interesting facts about the city and its attractions during the trip. You can also go to Gassan Diamonds for a free tour of the jewelry store",
+  "startDate": {
+    "$date": "2023-04-18T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2024-04-18T00:00:00.000Z"
+  },
+  "tourPrice": 5.25
+},{
+  "_id": {
+    "$oid": "6442ce1aea9f305e34d38f76"
+  },
+  "tourName": "Amsterdam: Highlights Canal Cruise",
+  "description": "Discover beautiful Amsterdam from a unique perspective during an enchanting cruise through Amsterdam's canals. See the Anne Frank House, the Rijksmuseum, and other notable landmarks from the boat.",
+  "startDate": {
+    "$date": "2023-04-18T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2024-04-18T00:00:00.000Z"
+  },
+  "tourPrice": 9.25
+}]

@@ -1,0 +1,47 @@
+#create news
+mutation createNews($news: NewsInput!) {
+  createNews(news: $news){
+    _id,
+    newsHeader,
+    newsContent,
+    newsImage{
+      imagePath
+    },
+    newsDate
+  }
+}
+
+{
+  "news": {
+    "newsHeader": "Test NEW2",
+    "newsContent": "Test content",
+    "newsImage": {"imagePath": "test/img"},
+    "newsDate": "2023-04-24"
+  }
+}
+
+#subscription
+subscription pubSub {
+  createNews{
+    _id,
+    newsHeader,
+    newsContent,
+    newsDate,
+    newsImage{
+      imagePath
+    }
+  }
+}
+
+#get last news
+query getLastNews {
+  getLastNews{
+     _id,
+    newsHeader,
+    newsContent,
+    newsDate,
+    newsImage{
+      imagePath
+    }
+  }
+}

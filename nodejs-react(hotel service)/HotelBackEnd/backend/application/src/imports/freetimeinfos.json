@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "6442e2302544abd9f39be165"
+  },
+  "leisureName": "De L'Europe Gym",
+  "description": "Lots of different trainers. Various training programs as well as polite and professional staff",
+  "price": 0
+},{
+  "_id": {
+    "$oid": "6442e2aa2544abd9f39be167"
+  },
+  "leisureName": "Billiard",
+  "description": "For lovers of quiet evenings in the company of delicious alcohol and tobacco",
+  "price": 0
+},{
+  "_id": {
+    "$oid": "6442e30a2544abd9f39be169"
+  },
+  "leisureName": "Swimming pool",
+  "description": "5 tracks 25 meters long. Who doesn't like to swim",
+  "price": 5.25
+}]

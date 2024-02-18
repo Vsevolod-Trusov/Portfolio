@@ -1,0 +1,15 @@
+mutation createFeedback($feedback: FeedbackInput!, $token: String!){
+    createFeedback (createFeedback:$feedback, token: $token) {
+        userLogin,
+        review,
+        estimation
+    }
+}
+
+query getFeedbacks {
+    getAllFeedbacks {
+        userLogin,
+        review,
+        estimation
+    }
+}

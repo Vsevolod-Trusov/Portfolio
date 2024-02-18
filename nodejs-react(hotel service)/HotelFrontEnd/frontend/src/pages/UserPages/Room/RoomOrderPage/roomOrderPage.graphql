@@ -1,0 +1,13 @@
+mutation createOrderRoom($createOrderRoom: OrderRoomInput!, $token: String!) {
+    createOrderRoom(createOrderRoom: $createOrderRoom, token: $token){
+        _id,
+        roomNumber,
+        peopleAmount,
+        checkInDate,
+        exitDate,
+        roomServices,
+        roomType,
+        orderPrice,
+        userLogin
+    }
+}

@@ -1,0 +1,323 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type AccessTokenOutput {
+  login: String!
+  role: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Deleted {
+  acknowledged: Boolean!
+  deletedCount: Float!
+}
+
+type Feedback {
+  estimation: Float!
+  review: String!
+  userLogin: String!
+}
+
+input FeedbackInput {
+  estimation: Float!
+  review: String!
+  userLogin: String
+}
+
+type FreeTimeInfo {
+  description: String!
+  leisureName: String!
+  price: Float
+}
+
+input FreeTimeInfoInput {
+  description: String
+  leisureName: String!
+  price: Float
+}
+
+type Image {
+  imagePath: String!
+}
+
+input ImageInput {
+  imagePath: String!
+}
+
+type Meal {
+  mealDescription: String!
+  mealName: String!
+  mealPrice: Float!
+}
+
+input MealInput {
+  mealDescription: String
+  mealName: String!
+  mealPrice: Float
+}
+
+type Mutation {
+  changeHobby(hobby: FreeTimeInfoInput!): FreeTimeInfo!
+  createFeedback(createFeedback: FeedbackInput!, token: String!): Feedback!
+  createHobby(createHobby: FreeTimeInfoInput!): FreeTimeInfo!
+  createMeal(createMeal: MealInput!): Meal!
+  createNews(news: NewsInput!): [News!]!
+  createOrderMeal(createOrder: OrderMealInput!, token: String!): OrderMeal!
+  createOrderRoom(createOrderRoom: OrderRoomInput!, token: String!): OrderRoom!
+  createOrderTour(createOrderTour: OrderTourInput!, token: String!): OrderTour!
+  createRoom(createRoom: RoomInput!): Room!
+  createRoomService(createRoomService: RoomServiceInput!): RoomService!
+  createTable(createTable: PlaceTableInput!): PlaceTable!
+  createTour(createTour: TourInput!): Tour!
+  createUser(createUser: UserInput!): User!
+  deleteOneHobby(hobbyName: String!): Deleted!
+  deleteOneMeal(mealName: String!): Deleted!
+  deleteOneMealOrder(orderId: String!): Deleted!
+  deleteOneOrderRoom(orderId: String!): Deleted!
+  deleteOneRoom(name: String!): Deleted!
+  deleteOneRoomService(serviceName: String!): Deleted!
+  deleteOneTable(tableNumber: String!): Deleted!
+  deleteOneTour(tourName: String!): Deleted!
+  deleteOneTourOrder(orderId: String!): Deleted!
+  loginUser(userInput: UserInput!): UserOutput!
+  subscribeOnNews(token: String!): User!
+  unsubscribeOnNews(token: String!): User!
+  updateMeal(meal: MealInput!): Meal!
+  updateOneRoom(room: RoomInput!): Room!
+  updateRoomService(service: RoomServiceInput!): RoomService!
+  updateTable(table: PlaceTableInput!): PlaceTable!
+  updateTour(tour: TourInput!): Tour!
+}
+
+type News {
+  _id: String!
+  newsContent: String!
+  newsDate: DateTime!
+  newsHeader: String!
+  newsImage: Image!
+}
+
+input NewsInput {
+  _id: String
+  newsContent: String
+  newsDate: DateTime
+  newsHeader: String
+  newsImage: ImageInput
+}
+
+type OrderMeal {
+  _id: String!
+  bookDate: String
+  bookTime: String
+  inRoom: Boolean!
+  meals: [String!]!
+  mealsAmount: [Int!]!
+  orderPrice: Float!
+  tableNumber: String
+  userLogin: String!
+}
+
+input OrderMealInput {
+  _id: String
+  bookDate: String
+  bookTime: String
+  inRoom: Boolean!
+  meals: [String!]!
+  mealsAmount: [Int!]!
+  orderPrice: Float!
+  tableNumber: String
+  userLogin: String
+}
+
+type OrderRoom {
+  _id: String!
+  checkInDate: DateTime!
+  exitDate: DateTime!
+  orderPrice: Float!
+  peopleAmount: Float!
+  roomNumber: String!
+  roomServices: [String!]!
+  roomType: String!
+  userLogin: String!
+}
+
+input OrderRoomInput {
+  _id: String
+  checkInDate: DateTime
+  exitDate: DateTime
+  orderPrice: Float
+  peopleAmount: Float
+  roomNumber: String
+  roomServices: [String!]
+  roomType: String!
+  userLogin: String
+}
+
+type OrderTour {
+  _id: String!
+  orderPrice: Float!
+  peopleAmount: Float!
+  tourDate: DateTime!
+  tourName: String!
+  userLogin: String!
+}
+
+input OrderTourInput {
+  _id: String
+  orderPrice: Float
+  peopleAmount: Float
+  tourDate: DateTime
+  tourName: String
+  userLogin: String
+}
+
+type PlaceTable {
+  amountSeats: Float!
+  availabilitySchedule: [TableTimesModel!]!
+  status: String!
+  tableNumber: String!
+}
+
+input PlaceTableInput {
+  amountSeats: Float
+  availabilitySchedule: [TableTimesInput!]
+  status: String
+  tableNumber: String!
+}
+
+type Query {
+  findNewsByFilter(filter: NewsInput!): [News!]!
+  getAllFeedbacks: [Feedback!]!
+  getAllHobbies: [FreeTimeInfo!]!
+  getAllMealOrders: [OrderMeal!]!
+  getAllMeals: [Meal!]!
+  getAllOrderRooms: [OrderRoom!]!
+  getAllOrderTours: [OrderTour!]!
+  getAllRoomServices: [RoomService!]!
+  getAllRooms: [Room!]!
+  getAllTables: [PlaceTable!]!
+  getAllTours: [Tour!]!
+  getAmountTables: Float!
+  getBookTimes(bookDate: String!, tableNumber: String!): [TableTimeModel!]!
+  getIsSubscribed(token: String!): Boolean!
+  getLastNews: [News!]!
+  getOneTour(tourName: String!): Tour!
+  getOneUser(login: String!): User!
+  getRole(token: String!): AccessTokenOutput!
+  getRoomTypesToBook(adultsAmount: String!, finishDate: String!, startDate: String!): [RoomType!]!
+  refreshToken(userInput: UserInput!): UserOutput!
+}
+
+type Room {
+  availabilitySchedule: [String!]!
+  roomNumber: String!
+  roomType: RoomType!
+  status: String!
+}
+
+input RoomInput {
+  availabilitySchedule: [String!]
+  roomNumber: String!
+  roomType: RoomTypeInput
+  status: String
+}
+
+type RoomService {
+  orderRooms: [String!]!
+  serviceDescription: String!
+  serviceName: String!
+  servicePrice: Float!
+}
+
+input RoomServiceInput {
+  orderRooms: [String!]
+  serviceDescription: String
+  serviceName: String!
+  servicePrice: Float
+}
+
+type RoomType {
+  amountBed: Float!
+  basePrice: Float!
+  type: String!
+}
+
+input RoomTypeInput {
+  amountBed: Float
+  basePrice: Float
+  type: String!
+}
+
+type Subscription {
+  createNews: [News!]!
+}
+
+input TableTimeInput {
+  key: String
+  value: Boolean
+}
+
+type TableTimeModel {
+  key: String!
+  value: Boolean!
+}
+
+input TableTimesInput {
+  bookTimes: [TableTimeInput!]
+  date: String
+}
+
+type TableTimesModel {
+  bookTimes: [TableTimeModel!]!
+  date: String!
+}
+
+type Tour {
+  description: String!
+  endDate: DateTime!
+  startDate: DateTime!
+  tourName: String!
+  tourPrice: Float!
+}
+
+input TourInput {
+  description: String
+  endDate: DateTime
+  startDate: DateTime
+  tourName: String!
+  tourPrice: Float
+}
+
+type User {
+  avatar: Image!
+  email: String!
+  login: String!
+  password: String!
+  refreshToken: String
+  role: String!
+  subscribedOnNews: Boolean
+}
+
+input UserInput {
+  avatar: ImageInput
+  email: String
+  login: String!
+  password: String
+  refreshToken: String
+  role: String
+  subscribedOnNews: Boolean
+}
+
+type UserOutput {
+  accessToken: String!
+  email: String!
+  login: String!
+  refreshToken: String!
+  role: String!
+  subscribedOnNews: Boolean!
+}

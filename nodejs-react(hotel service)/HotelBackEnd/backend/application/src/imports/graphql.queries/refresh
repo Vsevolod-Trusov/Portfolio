@@ -1,0 +1,26 @@
+#refresh
+query refresh($user:UserInput!) {
+  refreshToken(userInput: $user) {
+    accessToken,
+    login
+  }
+}
+
+{
+  "user": {
+    "login": "vsevolod",
+    "password": "Seva2002",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZzZXZvbG9kQG1haWwucnUiLCJsb2dpbiI6InZzZXZvbG9kIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjgyOTI5MzQyLCJleHAiOjE2ODI5MzI5NDJ9.wUW7eDGTOpuasg6i-dA-PJAowJY_FKiY6gLLweJgwrU"
+  }
+}
+
+{
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZzZXZvbG9kQG1haWwucnUiLCJsb2dpbiI6InZzZXZvbG9kIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjgyODc4Njc1LCJleHAiOjE2ODI4ODIyNzV9.RBU7MAahG9rGjFOkGwEu-BiOj01hQTR2snunNgV82JY"}
+
+#get role
+query getRole($token: String!){
+  getRole(token: $token) {
+    role,
+    login
+  }
+}

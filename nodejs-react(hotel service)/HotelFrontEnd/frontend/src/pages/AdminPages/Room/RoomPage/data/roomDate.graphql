@@ -1,0 +1,55 @@
+query room {
+    getAllRooms {
+        roomNumber,
+        roomType{
+            type,
+            basePrice,
+            amountBed
+        }
+    }
+}
+
+query roomOrder{
+    getAllOrderRooms{
+        _id,
+        roomNumber,
+        roomType,
+        peopleAmount,
+        checkInDate,
+        exitDate,
+        roomServices,
+        orderPrice,
+        userLogin
+
+    }
+}
+
+mutation deleteOneOrderRoom($id: String!) {
+    deleteOneOrderRoom(orderId: $id) {
+        acknowledged,
+        deletedCount
+    }
+}
+
+mutation updateRoom($room: RoomInput!) {
+    updateOneRoom(room:$room) {
+        roomNumber,
+        roomType {
+            amountBed,
+            basePrice,
+            type
+        }
+    }
+}
+
+mutation deleteRoom($name: String!) {
+    deleteOneRoom(name:$name) {
+        acknowledged,
+        deletedCount
+    }
+}
+
+mutation createRoom($room: RoomInput!) {
+    createRoom(createRoom: $room) {
+        roomNumber
+    }}

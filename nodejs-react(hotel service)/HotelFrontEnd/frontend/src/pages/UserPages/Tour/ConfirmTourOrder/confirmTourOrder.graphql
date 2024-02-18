@@ -1,0 +1,5 @@
+mutation orderTour($order: OrderTourInput!, $token: String!) {
+    createOrderTour(createOrderTour: $order, token: $token){
+        _id
+    }
+}
