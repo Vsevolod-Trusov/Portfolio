@@ -1,0 +1,159 @@
+﻿<Page x:Class="ServiceDelivery.Views.Pages.UserView.ReviewView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ServiceDelivery.Views.Pages.UserView"
+      xmlns:viewModel="clr-namespace:ServiceDelivery.ViewModels.UserViewModels"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ReviewView">
+
+    <!--Остановилсся на верстке review-->
+        <Page.DataContext>
+        <viewModel:ReviewViewModel/>
+    </Page.DataContext>
+    <Grid HorizontalAlignment="Center" >
+            <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" 
+                   Text="Addressee"
+                   Foreground="White" FontSize="14"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Margin="0 0 20 0"/>
+
+        <ComboBox  Grid.Row="0" Grid.Column="1" 
+                   MinWidth="50"
+                   Width="200"
+                   HorizontalAlignment="Left"
+                   HorizontalContentAlignment="Center"
+                   VerticalAlignment="Center"
+                    ItemsSource="{Binding Profiles}"
+                   SelectedItem="{Binding SelectedProfile}"
+                   Background="{DynamicResource ForegroundBase}"
+                   IsEditable="False"
+                   BorderBrush="Black"
+                   Foreground="{DynamicResource FieldTextColor}"
+                   >
+            <ComboBox.ItemTemplate>
+                <DataTemplate >
+                    <WrapPanel Orientation="Horizontal">
+                        <Image Source="{Binding Avatar}" Height="30" Width="30" />
+                        <TextBlock Text="{Binding Login}" Padding="5 0 0 0 " VerticalAlignment="Center"/>
+                    </WrapPanel>
+                </DataTemplate >
+            </ComboBox.ItemTemplate>
+
+        </ComboBox>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" 
+                   Text="Review"
+                   Foreground="White" FontSize="14"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left"
+                   Margin="0 0 20 0"/>
+            <TextBox Grid.Row="1" Grid.Column="1"
+                 Text="{Binding ReviewMessage}"
+                 BorderBrush="{DynamicResource ForegroundBase}"
+                 BorderThickness="1"
+                 Foreground="{DynamicResource FieldTextColor}"
+                 MinWidth="300"
+                 MaxWidth="300"
+                 HorizontalAlignment="Left"
+                 TextWrapping="Wrap"
+                 MaxHeight="110"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                 ScrollViewer.CanContentScroll="True"
+                 />
+
+        <TextBlock Grid.Row="2" Grid.Column="0" 
+                   Text="Estimation"
+                   Foreground="White" FontSize="14"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Margin="0 0 20 0"/>
+        <ComboBox Grid.Row="2" Grid.Column="1"
+                  ItemsSource="{Binding Estimations}"
+                 SelectedItem="{Binding Estimation}"
+                 MinWidth="80"
+                 MaxWidth="80"
+                 MaxHeight="30"
+                 MinHeight="30"
+                 HorizontalAlignment="Left"
+                  Background="{DynamicResource ForegroundBase}"
+                  Foreground="{DynamicResource FieldTextColor}"
+                  BorderBrush="Black"
+                  HorizontalContentAlignment="Center"
+                 />
+
+
+        <TextBlock Grid.Row="3" Grid.Column="0" 
+                   Text="Image"
+                   Foreground="White" FontSize="14"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left"
+                   Margin="0 0 20 0"/>
+
+        <Border Grid.Row="3" Grid.Column="1"
+                BorderBrush="White"
+                BorderThickness="1"
+                MinHeight="170"
+                MaxHeight="200"
+                MinWidth="300"
+                MaxWidth="420"
+                >
+            <StackPanel
+                Name="BorderImage"
+                 VerticalAlignment="Center"
+                  MinHeight="170"
+                    MaxHeight="200"
+                    MinWidth="300"
+                    MaxWidth="420"
+                >
+                <Label 
+                   Content ="Download Image"
+                   Name="ImageTitle"
+                   Foreground="LightGray" 
+                    FontSize="16"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                     MinHeight="200"
+                    MaxHeight="200"
+                    Width="400"
+                    MinWidth="300"
+                    MaxWidth="420"
+                    />
+                <Image Name="DownloadImage"
+                       Source="{Binding Path=ReviewImagePath}"
+                       />
+            </StackPanel>
+        </Border>
+        <Button Grid.Column="1" Grid.Row="4"
+                Style="{DynamicResource BtnMenu}"
+                Command="{Binding ChooseImage}"
+                Content="Select Image"
+                Foreground="White"
+                FontSize="14"/>
+       <Button Grid.Column="1" Grid.Row="5" 
+               Command="{Binding SendReview}"
+                Content="Do review"
+               HorizontalAlignment="Left"
+               Padding="20 0 20 0"
+                FontSize="14"/>
+    </Grid>
+</Page>

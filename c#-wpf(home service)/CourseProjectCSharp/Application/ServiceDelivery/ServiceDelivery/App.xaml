@@ -1,0 +1,26 @@
+﻿<Application x:Class="ServiceDelivery.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ServiceDelivery"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Startup="OnStartUp">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Themes/Theme.Light.xaml"/>
+                <ResourceDictionary Source="/Resources/Languages/Lang.En.xaml"/>
+                
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Yellow.xaml" />
+                <ResourceDictionary Source="/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+
+
+                <ResourceDictionary Source="/Resources/Styles/BaseStyle.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/BtnStyle.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/DataGridStyle.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/AboutUsViewStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

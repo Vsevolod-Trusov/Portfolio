@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dcf5fe1de5724841a5e0b08522d983a7" Name="Diagram1">
+        <EntityTypeShape EntityType="ServiceBaseModel.Image" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceBaseModel.Review" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceBaseModel.ServiceOrder" Width="1.5" PointX="8.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceBaseModel.ServiceType" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceBaseModel.UserLogin" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiceBaseModel.UserProfile" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <AssociationConnector Association="ServiceBaseModel.Avatar_UsersProfile_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceBaseModel.Photo_Reviews_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceBaseModel.UsersProfileId_Reviews_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceBaseModel.CustomerProfileId_ServiceOrder_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceBaseModel.ExecutorProfileId_ServiceOrder_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceBaseModel.ServiceTypeId_ServiceOrder_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceBaseModel.UserLoginId_UserProfile_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiceBaseModel.UserService" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

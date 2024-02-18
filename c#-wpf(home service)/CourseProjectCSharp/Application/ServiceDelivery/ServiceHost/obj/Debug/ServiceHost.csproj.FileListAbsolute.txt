@@ -1,0 +1,3 @@
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\obj\Debug\ServiceHost.csproj.AssemblyReference.cache
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\obj\Debug\ServiceHost.csproj.SuggestedBindingRedirects.cache
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\obj\Debug\ServiceHost.csproj.CoreCompileInputs.cache

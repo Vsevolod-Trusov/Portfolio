@@ -1,0 +1,16 @@
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\bin\Debug\ServiceHost.exe.config
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\bin\Debug\ServiceHost.exe
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\bin\Debug\ServiceHost.pdb
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\bin\Debug\EntityFramework.dll
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\bin\Debug\EntityFramework.SqlServer.dll
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\bin\Debug\WCFService.dll
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\bin\Debug\WCFService.pdb
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\bin\Debug\WCFService.dll.config
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\bin\Debug\EntityFramework.xml
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\bin\Debug\EntityFramework.SqlServer.xml
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\obj\Debug\Service_Host.csproj.AssemblyReference.cache
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\obj\Debug\Service_Host.csproj.SuggestedBindingRedirects.cache
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\obj\Debug\Service_Host.csproj.CoreCompileInputs.cache
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\obj\Debug\Service_Host.csproj.CopyComplete
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\obj\Debug\ServiceHost.exe
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\obj\Debug\ServiceHost.pdb

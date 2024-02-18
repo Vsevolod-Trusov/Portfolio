@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ServiceDelivery.ViewModels.AdminViewModels.AddAdminViewModel" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAgAAACIgAAAAAAAABAAAAAAAAAACAAAQAAAAIAA=</HashCode>
+      <FileName>ViewModels\AdminViewModels\AddAdminViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.AdminViewModels.AdminProfileViewModel" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hIAAAAEAACAAAAAAICQAAIAQAAAAAAAFAQEAAAAAABA=</HashCode>
+      <FileName>ViewModels\AdminViewModels\AdminProfileViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.AdminViewModels.OnlineUsersViewModel" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\AdminViewModels\OnlineUsersViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.AdminViewModel" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAgAAAAQAABAAAAAgAAAAgAAAAAAAAAAACCAAAA=</HashCode>
+      <FileName>ViewModels\AdminViewModels\AdminViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.CreatedOrderViewModel" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAIAAAAgQgAIAAIAAAgCAAAAIAAAAAAAZAgAAAgCA=</HashCode>
+      <FileName>ViewModels\AdminViewModels\CreatedOrderViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.EditViewModel" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAEAABAAQAAAAAAAAABCAAAAAABAMAAAAAAAA=</HashCode>
+      <FileName>ViewModels\AdminViewModels\EditViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.StaffViewModels.ExecutorReviewViewModel" Collapsed="true">
+    <Position X="5.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAEAAAAAAAAAAAAAAAAAAAAEAABgAAAAQAAAAAAA=</HashCode>
+      <FileName>ViewModels\StaffViewModels\ExecutorReviewViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.StaffViewModels.ProcessedOrdersViewModel" Collapsed="true">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAIAAAAARgCAAAIAAAgAAAAAAAAAAAAAIAgAACACA=</HashCode>
+      <FileName>ViewModels\StaffViewModels\ProcessedOrdersViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.ProfilePageViewModel" Collapsed="true">
+    <Position X="5.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hoQIAAEAACAAAAAAJCUAAIAQAAAAAAAFAQEAABAAABA=</HashCode>
+      <FileName>ViewModels\StaffViewModels\ProfilePageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.StaffViewModel" Collapsed="true">
+    <Position X="7.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\StaffViewModels\StaffViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.UserViewModels.CallBackManager" Collapsed="true">
+    <Position X="5.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\UserViewModels\CallBackManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.UserViewModels.DeliveryViewModel" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAQAAAQAABAAgEEEAAAAAAAAAAAAAAAEAAAAAAQQ=</HashCode>
+      <FileName>ViewModels\UserViewModels\DeliveryViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.UserViewModels.DoOrderViewModel" Collapsed="true">
+    <Position X="9.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAABBEAAAAAAAAIAAACAAACAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>ViewModels\UserViewModels\DoOrderViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.UserViewModels.DriverOrderViewModel" Collapsed="true">
+    <Position X="5.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAQAIAUEAAAAAGUEAAAAAAAAAAAAAgQAAAAAAAQA=</HashCode>
+      <FileName>ViewModels\UserViewModels\DriverOrderViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.UserViewModels.HomeOrderViewModel" Collapsed="true">
+    <Position X="7.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAQAIAQAgAAAAEEEAAAAAAAAAAAAAgAEAAAAAAQA=</HashCode>
+      <FileName>ViewModels\UserViewModels\HomeOrderViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.UserViewModels.OrdersViewModel" Collapsed="true">
+    <Position X="9.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIIAAAgQgAAAAAAAAAAAAAAAAAAAAABYAgAAAgCA=</HashCode>
+      <FileName>ViewModels\UserViewModels\OrdersViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.UserViewModels.ReviewViewModel" Collapsed="true">
+    <Position X="5.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAEAAAAIiAEACAAAAABBIAAMAAAAiAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\UserViewModels\ReviewViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.UserViewModels.UserProfileViewModel" Collapsed="true">
+    <Position X="7.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hIAAAAEAACAAAAAAICQAAIAQAAAAAAAFAQEAAAAAABA=</HashCode>
+      <FileName>ViewModels\UserViewModels\UserProfileViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.UserViewModel" Collapsed="true">
+    <Position X="9.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\UserViewModels\UserViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.AuthorizationViewModel" Collapsed="true">
+    <Position X="5.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAgACAAAgAAAAECAAAAAAAgAAAAACAAAQAQAAAAA=</HashCode>
+      <FileName>ViewModels\AuthorizationViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.MainWindowViewModel" Collapsed="true">
+    <Position X="16.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAgAAEAAAAIAABAAAAAACAAAQAAEAAAA=</HashCode>
+      <FileName>ViewModels\MainWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.RegistrationViewModel" Collapsed="true">
+    <Position X="18.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAgACACIgAAAAEAAAAAAAAgAAAAADAAAQAAAAIAA=</HashCode>
+      <FileName>ViewModels\RegistrationViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.SettingsViewModel" Collapsed="true">
+    <Position X="14.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAgQAAAAgAAAQAAAAAACAAAIAAAAABAAAAAAAAEA=</HashCode>
+      <FileName>ViewModels\SettingsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.ViewModels.ViewModelBase" Collapsed="true">
+    <Position X="10.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ServiceDelivery.Models.Admin.OnlineUsersModel" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Admin\OnlineUsersModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.Models.EditModel" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAACAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Models\Admin\EditModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.Models.HelloClientAdminModel" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\RoleModel\HelloClientAdminModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.Models.HelloClientStaffModel" Collapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\RoleModel\HelloClientStaffModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.Models.HelloClientUserModel" Collapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\RoleModel\HelloClientUserModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.Models.Staff.ConfirmModel" Collapsed="true">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Staff\ConfirmModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.Models.Staff.ExecutorReviewModel" Collapsed="true">
+    <Position X="14.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Staff\ExecutorReviewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.Models.Staff.ProcessedOrdersModel" Collapsed="true">
+    <Position X="12.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Staff\ProcessedOrdersModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.Models.ProfilePageModel" Collapsed="true">
+    <Position X="14.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAACEAAAAAAAAAAIAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Staff\ProfilePageModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.Models.User.DeliveryModel" Collapsed="true">
+    <Position X="12.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAABAAgAAAAAAAAAAAAAAAAAAEAAAAAAQQ=</HashCode>
+      <FileName>Models\User\DeliveryModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.Models.User.DriverOrderModel" Collapsed="true">
+    <Position X="14.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAQUAAAAAAAAAAAAAAEAAgAAAAAEAAAAAAQA=</HashCode>
+      <FileName>Models\User\DriverOrderModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.Models.User.HomeOrderModel" Collapsed="true">
+    <Position X="16.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQQgAAAAAAAAAAAAAAAAAAAAAAEAAAAAAQA=</HashCode>
+      <FileName>Models\User\HomeOrderModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.Models.User.ImgText" Collapsed="true">
+    <Position X="12.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Models\User\ImgText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.Models.User.OrdersModel" Collapsed="true">
+    <Position X="14.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\User\OrdersModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.Models.User.ReviewModel" Collapsed="true">
+    <Position X="16.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAgAAAAAAAAABBAAAAAAAADAAAAAAAAA=</HashCode>
+      <FileName>Models\User\ReviewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.Models.User.UserProfileModel" Collapsed="true">
+    <Position X="12.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAACAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\User\UserProfileModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.Models.SettingsModel" Collapsed="true">
+    <Position X="20.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAABAEA=</HashCode>
+      <FileName>Models\SettingsModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.Models.RegistrationModel" Collapsed="true">
+    <Position X="18.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAAAAAEAAAAAAAAgAAAAACAAAQAAAAIAA=</HashCode>
+      <FileName>Models\RegistrationModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.AdminView.AddAdminView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAACAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\AdminView\AddAdminView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.AdminView.AdminProfileView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\AdminView\AdminProfileView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.AdminView.AdminView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAIAAAAAAEAAIAAAAAAAABAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\AdminView\AdminView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.AdminView.CreatedOrderView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\AdminView\CreatedOrderView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.AdminView.EditView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\AdminView\EditView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.AdminView.OnllineUsersView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\AdminView\OnllineUsersView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.Staff.ExecutorReviewView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\Staff\ExecutorReviewView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.Staff.ProcessedOrdersView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\Staff\ProcessedOrdersView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.Staff.StaffView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAIAAAAAgAAAEAACAACAAQAAAAA=</HashCode>
+      <FileName>Views\Pages\Staff\StaffView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.UserView.DeliveryView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\UserView\DeliveryView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.UserView.DoOrderView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\UserView\DoOrderView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.UserView.DriverOrderView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\UserView\DriverOrderView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.UserView.HomeOrderView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\UserView\HomeOrderView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.UserView.OrdersView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\UserView\OrdersView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.UserView.ReviewView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAIAAEQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\UserView\ReviewView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.UserView.UserProfileView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\UserView\UserProfileView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.UserView.UserView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAIAAAEAAIAAAAIAAAAAAACAACAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\UserView\UserView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.StaffProfileView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\StaffProfileView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.RegistrationView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAACAAAAAAIAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Views\RegistrationView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.MainWindowView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAADgAAAEAAAABAAQAAIAAAAAAAAAA=</HashCode>
+      <FileName>Views\MainWindowView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.AuthorizationView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQABAACAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AuthorizationView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.SettingView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\SettingView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.WarningView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\WarningView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.NoReviewsView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\NoReviewsView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ServiceDelivery.Views.Pages.AboutUsView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\AboutUsView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

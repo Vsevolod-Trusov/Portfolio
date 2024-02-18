@@ -1,0 +1,15 @@
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\WCFService\bin\Debug\WCFService.dll.config
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\WCFService\bin\Debug\WCFService.dll
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\WCFService\bin\Debug\WCFService.pdb
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\WCFService\bin\Debug\EntityFramework.dll
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\WCFService\bin\Debug\EntityFramework.SqlServer.dll
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\WCFService\bin\Debug\ServiceDelivery.exe
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\WCFService\bin\Debug\ServiceDelivery.pdb
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\WCFService\bin\Debug\ServiceDelivery.exe.config
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\WCFService\bin\Debug\EntityFramework.xml
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\WCFService\bin\Debug\EntityFramework.SqlServer.xml
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\WCFService\obj\Debug\WCFService.csproj.AssemblyReference.cache
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\WCFService\obj\Debug\WCFService.csproj.CoreCompileInputs.cache
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\WCFService\obj\Debug\WCFService.csproj.CopyComplete
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\WCFService\obj\Debug\WCFService.dll
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\WCFService\obj\Debug\WCFService.pdb

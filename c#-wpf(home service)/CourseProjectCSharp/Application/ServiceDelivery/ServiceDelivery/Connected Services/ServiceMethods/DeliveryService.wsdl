@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="DeliveryService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IDeliveryService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8301/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8301/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8301/?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDeliveryService_AddUserCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserCount" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_AddUserCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_RemoveUserCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserCount" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_RemoveUserCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetOnlineUsersCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlineUsersCount" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetOnlineUsersCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlineUsersCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_CreateAdminEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAdminEntry" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_CreateAdminEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAdminEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_Registration_InputMessage">
+    <wsdl:part name="parameters" element="tns:Registration" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_Registration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_RegistrationWithValidation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationWithValidation" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_RegistrationWithValidation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationWithValidationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_ValidationAuthorisation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidationAuthorisation" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_ValidationAuthorisation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidationAuthorisationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_ValidationRegistration_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidationRegistration" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_ValidationRegistration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidationRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_Authorisation_InputMessage">
+    <wsdl:part name="parameters" element="tns:Authorisation" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_Authorisation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthorisationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_AuthorisationWithValidation_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthorisationWithValidation" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_AuthorisationWithValidation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthorisationWithValidationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetUserAvatarPath_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAvatarPath" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetUserAvatarPath_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAvatarPathResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrders" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetNecessaryStaff_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNecessaryStaff" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetNecessaryStaff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNecessaryStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_ChangeOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeOrder" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_ChangeOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetFilteredOrdersByStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilteredOrdersByStatus" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetFilteredOrdersByStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilteredOrdersByStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetFilteredWaitingOrdersByStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilteredWaitingOrdersByStatus" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetFilteredWaitingOrdersByStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilteredWaitingOrdersByStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_SendOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendOrder" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_SendOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetId" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_CreateNewServiceType_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNewServiceType" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_CreateNewServiceType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNewServiceTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetStaffForReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaffForReview" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetStaffForReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaffForReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_CreateReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateReview" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_CreateReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetCustomerOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerOrders" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetCustomerOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetWaitingOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWaitingOrders" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetWaitingOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWaitingOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_CompleteOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompleteOrder" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_CompleteOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompleteOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_ChangeStaffProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeStaffProfile" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_ChangeStaffProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeStaffProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetServiceTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceTypes" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetServiceTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_CountExecutorServiceTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:CountExecutorServiceTypes" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_CountExecutorServiceTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CountExecutorServiceTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetReviews_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviews" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetReviews_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReviewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_CountReviews_InputMessage">
+    <wsdl:part name="parameters" element="tns:CountReviews" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_CountReviews_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CountReviewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_DeleteReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteReview" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_DeleteReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_ChangeAvatar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeAvatar" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_ChangeAvatar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeAvatarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_ChangeEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeEmail" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_ChangeEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmail" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetCustomerFilteredOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerFilteredOrders" />
+  </wsdl:message>
+  <wsdl:message name="IDeliveryService_GetCustomerFilteredOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerFilteredOrdersResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDeliveryService">
+    <wsdl:operation name="AddUserCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/AddUserCount" message="tns:IDeliveryService_AddUserCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/AddUserCountResponse" message="tns:IDeliveryService_AddUserCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/RemoveUserCount" message="tns:IDeliveryService_RemoveUserCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/RemoveUserCountResponse" message="tns:IDeliveryService_RemoveUserCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineUsersCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/GetOnlineUsersCount" message="tns:IDeliveryService_GetOnlineUsersCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/GetOnlineUsersCountResponse" message="tns:IDeliveryService_GetOnlineUsersCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAdminEntry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/CreateAdminEntry" message="tns:IDeliveryService_CreateAdminEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/CreateAdminEntryResponse" message="tns:IDeliveryService_CreateAdminEntry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Registration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/Registration" message="tns:IDeliveryService_Registration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/RegistrationResponse" message="tns:IDeliveryService_Registration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationWithValidation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/RegistrationWithValidation" message="tns:IDeliveryService_RegistrationWithValidation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/RegistrationWithValidationResponse" message="tns:IDeliveryService_RegistrationWithValidation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidationAuthorisation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/ValidationAuthorisation" message="tns:IDeliveryService_ValidationAuthorisation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/ValidationAuthorisationResponse" message="tns:IDeliveryService_ValidationAuthorisation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidationRegistration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/ValidationRegistration" message="tns:IDeliveryService_ValidationRegistration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/ValidationRegistrationResponse" message="tns:IDeliveryService_ValidationRegistration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Authorisation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/Authorisation" message="tns:IDeliveryService_Authorisation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/AuthorisationResponse" message="tns:IDeliveryService_Authorisation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorisationWithValidation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/AuthorisationWithValidation" message="tns:IDeliveryService_AuthorisationWithValidation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/AuthorisationWithValidationResponse" message="tns:IDeliveryService_AuthorisationWithValidation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAvatarPath">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/GetUserAvatarPath" message="tns:IDeliveryService_GetUserAvatarPath_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/GetUserAvatarPathResponse" message="tns:IDeliveryService_GetUserAvatarPath_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/GetOrders" message="tns:IDeliveryService_GetOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/GetOrdersResponse" message="tns:IDeliveryService_GetOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNecessaryStaff">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/GetNecessaryStaff" message="tns:IDeliveryService_GetNecessaryStaff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/GetNecessaryStaffResponse" message="tns:IDeliveryService_GetNecessaryStaff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/ChangeOrder" message="tns:IDeliveryService_ChangeOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/ChangeOrderResponse" message="tns:IDeliveryService_ChangeOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilteredOrdersByStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/GetFilteredOrdersByStatus" message="tns:IDeliveryService_GetFilteredOrdersByStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/GetFilteredOrdersByStatusResponse" message="tns:IDeliveryService_GetFilteredOrdersByStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilteredWaitingOrdersByStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/GetFilteredWaitingOrdersByStatus" message="tns:IDeliveryService_GetFilteredWaitingOrdersByStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/GetFilteredWaitingOrdersByStatusResponse" message="tns:IDeliveryService_GetFilteredWaitingOrdersByStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/SendOrder" message="tns:IDeliveryService_SendOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/SendOrderResponse" message="tns:IDeliveryService_SendOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/GetId" message="tns:IDeliveryService_GetId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/GetIdResponse" message="tns:IDeliveryService_GetId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewServiceType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/CreateNewServiceType" message="tns:IDeliveryService_CreateNewServiceType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/CreateNewServiceTypeResponse" message="tns:IDeliveryService_CreateNewServiceType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffForReview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/GetStaffForReview" message="tns:IDeliveryService_GetStaffForReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/GetStaffForReviewResponse" message="tns:IDeliveryService_GetStaffForReview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateReview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/CreateReview" message="tns:IDeliveryService_CreateReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/CreateReviewResponse" message="tns:IDeliveryService_CreateReview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/GetCustomerOrders" message="tns:IDeliveryService_GetCustomerOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/GetCustomerOrdersResponse" message="tns:IDeliveryService_GetCustomerOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWaitingOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/GetWaitingOrders" message="tns:IDeliveryService_GetWaitingOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/GetWaitingOrdersResponse" message="tns:IDeliveryService_GetWaitingOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompleteOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/CompleteOrder" message="tns:IDeliveryService_CompleteOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/CompleteOrderResponse" message="tns:IDeliveryService_CompleteOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeStaffProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/ChangeStaffProfile" message="tns:IDeliveryService_ChangeStaffProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/ChangeStaffProfileResponse" message="tns:IDeliveryService_ChangeStaffProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/GetServiceTypes" message="tns:IDeliveryService_GetServiceTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/GetServiceTypesResponse" message="tns:IDeliveryService_GetServiceTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CountExecutorServiceTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/CountExecutorServiceTypes" message="tns:IDeliveryService_CountExecutorServiceTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/CountExecutorServiceTypesResponse" message="tns:IDeliveryService_CountExecutorServiceTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReviews">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/GetReviews" message="tns:IDeliveryService_GetReviews_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/GetReviewsResponse" message="tns:IDeliveryService_GetReviews_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CountReviews">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/CountReviews" message="tns:IDeliveryService_CountReviews_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/CountReviewsResponse" message="tns:IDeliveryService_CountReviews_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteReview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/DeleteReview" message="tns:IDeliveryService_DeleteReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/DeleteReviewResponse" message="tns:IDeliveryService_DeleteReview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeAvatar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/ChangeAvatar" message="tns:IDeliveryService_ChangeAvatar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/ChangeAvatarResponse" message="tns:IDeliveryService_ChangeAvatar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/ChangeEmail" message="tns:IDeliveryService_ChangeEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/ChangeEmailResponse" message="tns:IDeliveryService_ChangeEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/GetEmail" message="tns:IDeliveryService_GetEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/GetEmailResponse" message="tns:IDeliveryService_GetEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerFilteredOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeliveryService/GetCustomerFilteredOrders" message="tns:IDeliveryService_GetCustomerFilteredOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeliveryService/GetCustomerFilteredOrdersResponse" message="tns:IDeliveryService_GetCustomerFilteredOrders_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IDeliveryService" type="tns:IDeliveryService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IDeliveryService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="AddUserCount">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/AddUserCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserCount">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/RemoveUserCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineUsersCount">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/GetOnlineUsersCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAdminEntry">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/CreateAdminEntry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registration">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/Registration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrationWithValidation">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/RegistrationWithValidation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidationAuthorisation">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/ValidationAuthorisation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidationRegistration">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/ValidationRegistration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authorisation">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/Authorisation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorisationWithValidation">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/AuthorisationWithValidation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAvatarPath">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/GetUserAvatarPath" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/GetOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNecessaryStaff">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/GetNecessaryStaff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeOrder">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/ChangeOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilteredOrdersByStatus">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/GetFilteredOrdersByStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilteredWaitingOrdersByStatus">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/GetFilteredWaitingOrdersByStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendOrder">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/SendOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetId">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/GetId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewServiceType">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/CreateNewServiceType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffForReview">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/GetStaffForReview" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateReview">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/CreateReview" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerOrders">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/GetCustomerOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWaitingOrders">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/GetWaitingOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteOrder">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/CompleteOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeStaffProfile">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/ChangeStaffProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceTypes">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/GetServiceTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountExecutorServiceTypes">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/CountExecutorServiceTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReviews">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/GetReviews" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountReviews">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/CountReviews" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteReview">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/DeleteReview" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeAvatar">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/ChangeAvatar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeEmail">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/ChangeEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmail">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/GetEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerFilteredOrders">
+      <soap12:operation soapAction="http://tempuri.org/IDeliveryService/GetCustomerFilteredOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DeliveryService">
+    <wsdl:port name="NetTcpBinding_IDeliveryService" binding="tns:NetTcpBinding_IDeliveryService">
+      <soap12:address location="net.tcp://localhost:8302/" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:8302/</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>DESKTOP-GVK7PKR\seva2</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

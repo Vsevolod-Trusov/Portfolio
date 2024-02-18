@@ -1,0 +1,16 @@
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\bin\Release\ServiceHost.exe.config
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\bin\Release\ServiceHost.exe
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\bin\Release\ServiceHost.pdb
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\bin\Release\EntityFramework.dll
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\bin\Release\EntityFramework.SqlServer.dll
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\bin\Release\WCFService.dll
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\bin\Release\WCFService.pdb
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\bin\Release\WCFService.dll.config
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\bin\Release\EntityFramework.xml
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\bin\Release\EntityFramework.SqlServer.xml
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\obj\Release\Service_Host.csproj.AssemblyReference.cache
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\obj\Release\Service_Host.csproj.SuggestedBindingRedirects.cache
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\obj\Release\Service_Host.csproj.CoreCompileInputs.cache
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\obj\Release\Service_Host.csproj.CopyComplete
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\obj\Release\ServiceHost.exe
+D:\Univer\2курс\2сем\ООТПиСП\CourseProjectCSharp\Application\ServiceDelivery\ServiceHost\obj\Release\ServiceHost.pdb

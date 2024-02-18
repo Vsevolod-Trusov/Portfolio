@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="MainAboutUsTitle" Color="#ffb000"/>
+    <SolidColorBrush x:Key="BackgroundStep0" Color="#ff8200"/>
+    <SolidColorBrush x:Key="FieldTextColor" Color="Black"/>
+    <SolidColorBrush x:Key="ForegroundBase" Color="White"/>
+    <SolidColorBrush x:Key="IconColor" Color="Black"/>
+    <SolidColorBrush x:Key="TextOver" Color="#757575"/>
+    <SolidColorBrush x:Key="HeaderColumnOver" Color="black"/>
+    <Color x:Key="LinearGradientStep0">#ff8200</Color>
+    <Color x:Key="LinearGradientStep1">#f49200</Color>
+    <Color x:Key="LinearGradientStep2">#f89500</Color>
+    <SolidColorBrush x:Key="BtnBackgroung" Color="{DynamicResource Primary500}"/>
+    <SolidColorBrush x:Key="BorderColor" Color="{DynamicResource Primary500}"/>
+    <SolidColorBrush x:Key="BtnForeground" Color="{DynamicResource Primary500Foreground}"/>
+    <ImageBrush x:Key="WarningImgPath" ImageSource="\Images\Other\warning2.png" />
+</ResourceDictionary>

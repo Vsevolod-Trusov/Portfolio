@@ -1,0 +1,184 @@
+﻿<Page x:Class="ServiceDelivery.Views.Pages.UserView.UserView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ServiceDelivery.Views.Pages"
+     xmlns:viewModel="clr-namespace:ServiceDelivery.ViewModels"
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="640" d:DesignWidth="1120"
+      Title="UserView">
+
+    <Page.DataContext>
+        <viewModel:UserViewModel/>
+    </Page.DataContext>
+    <Page.Resources>
+        <Storyboard x:Key="OpenMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="70"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.1" Value="200"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CloseMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="200"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0:0.1" Value="70"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+
+    </Page.Resources>
+    <Grid>
+
+        <!---->
+        <!--Основной грид-->
+        <!---->
+
+        <Grid Grid.Row="1" Grid.Column="0" Background="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="9*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!---->
+            <!--Контейнер с кнопками для переключения по страницам-->
+            <!---->
+            <Grid  Grid.RowSpan="2">
+                <StackPanel x:Name="GridMenu" 
+                                HorizontalAlignment="Left" 
+                                Width="200" 
+                                Background="Transparent"
+                                >
+                    <StackPanel Orientation="Horizontal">
+                        <Button    Style="{DynamicResource BtnMenu}"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" 
+                                    Width="70"
+                                    Height="50"
+                                    Click="CloseOpenMenu">
+                            <materialDesign:PackIcon Kind="Menu" Width="30" Height="30" Foreground="White"/>
+                        </Button>
+                        <Button Style="{DynamicResource BtnMenu}"
+                                Click="OpenAboutUs">
+                            <TextBlock Text="{DynamicResource Menu}"  HorizontalAlignment="Center" 
+                                           VerticalAlignment="Center"
+                                           Foreground="White"
+                                           FontSize="16"/>
+                        </Button>
+                    </StackPanel>
+                    <Rectangle Height="2" Fill="White"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button    Style="{DynamicResource BtnMenu}"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" 
+                                    Width="70"
+                                    Height="50"
+                                    Click="OpenProfileUserPage">
+                            <materialDesign:PackIcon Kind="ProfessionalHexagon" Width="30" Height="30" Foreground="White"/>
+                        </Button>
+                        <Button Style="{DynamicResource BtnMenu}"
+                                 Click="OpenProfileUserPage">
+                            <TextBlock Text="{DynamicResource Profile}"  HorizontalAlignment="Center" 
+                                           VerticalAlignment="Center"
+                                           Foreground="White"
+                                           FontSize="16"
+                                            />
+                        </Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button    Style="{DynamicResource BtnMenu}"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" 
+                                    Width="70"
+                                    Height="50"
+                                    Click="OpenDoOrderPage">
+                            <materialDesign:PackIcon Kind="Paper" Width="30" Height="30" Foreground="White"/>
+                        </Button>
+                        <Button Style="{DynamicResource BtnMenu}"
+                                 Click="OpenDoOrderPage">
+                            <TextBlock Text="{DynamicResource DoOrder}"  HorizontalAlignment="Center" 
+                                           VerticalAlignment="Center"
+                                           Foreground="White"
+                                           FontSize="16"
+                                            />
+                        </Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button    Style="{DynamicResource BtnMenu}"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" 
+                                    Width="70"
+                                    Height="50"
+                                   Click="OpenReviewPage"
+                                    >
+                            <materialDesign:PackIcon Kind="Comment"  Width="30" Height="30" Foreground="White"/>
+                        </Button>
+                        <Button Style="{DynamicResource BtnMenu}"
+                                Click="OpenReviewPage"
+                                >
+                            <TextBlock Text="{DynamicResource DoReview}"  HorizontalAlignment="Center" 
+                                           VerticalAlignment="Center"
+                                           Foreground="White"
+                                           FontSize="16"/>
+                        </Button>
+                       
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button    Style="{DynamicResource BtnMenu}"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" 
+                                    Width="70"
+                                    Height="50"
+                                   Click="OpenOrdersPage">
+                            <materialDesign:PackIcon Kind="AlphabetOBoxOutline"  Width="30" Height="30" Foreground="White"/>
+                        </Button>
+                        <Button Style="{DynamicResource BtnMenu}"
+                                Click="OpenOrdersPage">
+                            <TextBlock Text="{DynamicResource YourOrders}"  HorizontalAlignment="Center" 
+                                           VerticalAlignment="Center"
+                                           Foreground="White"
+                                           FontSize="16"/>
+                        </Button>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button    Style="{DynamicResource BtnMenu}"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top" 
+                                    Width="70"
+                                    Height="50"
+                                   Click="OpenSettingPage">
+                            <!--Command="{Binding OpenSettingsPage}"-->
+                            <materialDesign:PackIcon Kind="Settings" Width="30" Height="30" Foreground="White"/>
+                        </Button>
+                        <Button Style="{DynamicResource BtnMenu}"
+                                Click="OpenSettingPage">
+                            <!--Command="{Binding OpenSettingsPage}"-->
+                            <TextBlock Text="{DynamicResource Settings}"  HorizontalAlignment="Center" 
+                                           VerticalAlignment="Center"
+                                           Foreground="White"
+                                           FontSize="16"/>
+                        </Button>
+
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+            <!---->
+            <!--Frame для страниц-->
+            <!---->
+            <Frame  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"
+                        Name="MainFrames"
+                        Content="{Binding Page}"
+                        Background="Transparent" 
+                        NavigationUIVisibility="Hidden"
+                        ScrollViewer.VerticalScrollBarVisibility="Visible"
+                        ScrollViewer.CanContentScroll="True"/>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ServiceBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Image">
+    <Key>
+      <PropertyRef Name="ImageId" />
+    </Key>
+    <Property Name="ImageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ImagePath" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Review">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Estimation" Type="Int32" />
+    <NavigationProperty Name="Image" Relationship="Self.Photo_Reviews_FK" FromRole="Reviews" ToRole="Images" />
+    <NavigationProperty Name="UsersProfile" Relationship="Self.UsersProfileId_Reviews_FK" FromRole="Reviews" ToRole="UsersProfile" />
+  </EntityType>
+  <EntityType Name="ServiceOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="DataOrder" Type="DateTime" Precision="3" />
+    <Property Name="Desctiption" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="ExecutionStatus" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Deadline" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CustomerProfile" Relationship="Self.CustomerProfileId_ServiceOrder_FK" FromRole="ServiceOrder" ToRole="UsersProfile" />
+    <NavigationProperty Name="ExecutorProfile" Relationship="Self.ExecutorProfileId_ServiceOrder_FK" FromRole="ServiceOrder" ToRole="UsersProfile" />
+    <NavigationProperty Name="ServiceType" Relationship="Self.ServiceTypeId_ServiceOrder_FK" FromRole="ServiceOrder" ToRole="ServiceType" />
+  </EntityType>
+  <EntityType Name="ServiceType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Decimal" Precision="10" Scale="3" />
+  </EntityType>
+  <EntityType Name="UserLogin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Login" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordHash" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UserRole" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Avatar" Relationship="Self.Avatar_UsersProfile_FK" FromRole="UsersProfile" ToRole="Images" />
+    <NavigationProperty Name="Reviews" Relationship="Self.UsersProfileId_Reviews_FK" FromRole="UsersProfile" ToRole="Reviews" />
+    <NavigationProperty Name="CreatedOrder" Relationship="Self.CustomerProfileId_ServiceOrder_FK" FromRole="UsersProfile" ToRole="ServiceOrder" />
+    <NavigationProperty Name="WaitingOrder" Relationship="Self.ExecutorProfileId_ServiceOrder_FK" FromRole="UsersProfile" ToRole="ServiceOrder" />
+    <NavigationProperty Name="UsersLogin" Relationship="Self.UserLoginId_UserProfile_FK" FromRole="UsersProfile" ToRole="UsersLogin" />
+    <NavigationProperty Name="ServiceType" Relationship="Self.UserService" FromRole="UsersProfile" ToRole="ServiceType" />
+  </EntityType>
+  <Association Name="Avatar_UsersProfile_FK">
+    <End Role="Images" Type="ServiceBaseModel.Image" Multiplicity="0..1" />
+    <End Role="UsersProfile" Type="ServiceBaseModel.UserProfile" Multiplicity="*" />
+  </Association>
+  <Association Name="Photo_Reviews_FK">
+    <End Role="Images" Type="ServiceBaseModel.Image" Multiplicity="0..1" />
+    <End Role="Reviews" Type="ServiceBaseModel.Review" Multiplicity="*" />
+  </Association>
+  <Association Name="UsersProfileId_Reviews_FK">
+    <End Role="UsersProfile" Type="ServiceBaseModel.UserProfile" Multiplicity="0..1" />
+    <End Role="Reviews" Type="ServiceBaseModel.Review" Multiplicity="*" />
+  </Association>
+  <Association Name="CustomerProfileId_ServiceOrder_FK">
+    <End Role="UsersProfile" Type="ServiceBaseModel.UserProfile" Multiplicity="1" />
+    <End Role="ServiceOrder" Type="Self.ServiceOrder" Multiplicity="*" />
+  </Association>
+  <Association Name="ExecutorProfileId_ServiceOrder_FK">
+    <End Role="UsersProfile" Type="ServiceBaseModel.UserProfile" Multiplicity="0..1" />
+    <End Role="ServiceOrder" Type="Self.ServiceOrder" Multiplicity="*" />
+  </Association>
+  <Association Name="ServiceTypeId_ServiceOrder_FK">
+    <End Role="ServiceType" Type="Self.ServiceType" Multiplicity="0..1" />
+    <End Role="ServiceOrder" Type="Self.ServiceOrder" Multiplicity="*" />
+  </Association>
+  <Association Name="UserLoginId_UserProfile_FK">
+    <End Role="UsersLogin" Type="ServiceBaseModel.UserLogin" Multiplicity="0..1" />
+    <End Role="UsersProfile" Type="ServiceBaseModel.UserProfile" Multiplicity="*" />
+  </Association>
+  <Association Name="UserService">
+    <End Role="ServiceType" Type="Self.ServiceType" Multiplicity="*" />
+    <End Role="UsersProfile" Type="ServiceBaseModel.UserProfile" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="ServiceBaseContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Images" EntityType="ServiceBaseModel.Image" />
+    <EntitySet Name="Reviews" EntityType="ServiceBaseModel.Review" />
+    <EntitySet Name="ServiceOrder" EntityType="Self.ServiceOrder" />
+    <EntitySet Name="ServiceType" EntityType="Self.ServiceType" />
+    <EntitySet Name="UserLogins" EntityType="ServiceBaseModel.UserLogin" />
+    <EntitySet Name="UserProfiles" EntityType="ServiceBaseModel.UserProfile" />
+    <AssociationSet Name="Avatar_UsersProfile_FK" Association="Self.Avatar_UsersProfile_FK">
+      <End Role="Images" EntitySet="Images" />
+      <End Role="UsersProfile" EntitySet="UserProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="Photo_Reviews_FK" Association="Self.Photo_Reviews_FK">
+      <End Role="Images" EntitySet="Images" />
+      <End Role="Reviews" EntitySet="Reviews" />
+    </AssociationSet>
+    <AssociationSet Name="UsersProfileId_Reviews_FK" Association="Self.UsersProfileId_Reviews_FK">
+      <End Role="UsersProfile" EntitySet="UserProfiles" />
+      <End Role="Reviews" EntitySet="Reviews" />
+    </AssociationSet>
+    <AssociationSet Name="CustomerProfileId_ServiceOrder_FK" Association="Self.CustomerProfileId_ServiceOrder_FK">
+      <End Role="UsersProfile" EntitySet="UserProfiles" />
+      <End Role="ServiceOrder" EntitySet="ServiceOrder" />
+    </AssociationSet>
+    <AssociationSet Name="ExecutorProfileId_ServiceOrder_FK" Association="Self.ExecutorProfileId_ServiceOrder_FK">
+      <End Role="UsersProfile" EntitySet="UserProfiles" />
+      <End Role="ServiceOrder" EntitySet="ServiceOrder" />
+    </AssociationSet>
+    <AssociationSet Name="ServiceTypeId_ServiceOrder_FK" Association="Self.ServiceTypeId_ServiceOrder_FK">
+      <End Role="ServiceType" EntitySet="ServiceType" />
+      <End Role="ServiceOrder" EntitySet="ServiceOrder" />
+    </AssociationSet>
+    <AssociationSet Name="UserLoginId_UserProfile_FK" Association="Self.UserLoginId_UserProfile_FK">
+      <End Role="UsersLogin" EntitySet="UserLogins" />
+      <End Role="UsersProfile" EntitySet="UserProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="UserService" Association="Self.UserService">
+      <End Role="ServiceType" EntitySet="ServiceType" />
+      <End Role="UsersProfile" EntitySet="UserProfiles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
