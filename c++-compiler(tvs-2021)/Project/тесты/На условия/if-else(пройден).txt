@@ -1,0 +1,59 @@
+Program
+{
+set vshort b = 5;
+set vshort k = -3;
+
+if(k>b)
+{
+outputs "k>b t";
+}
+else
+{
+outputs "k>b f";
+}
+
+if(k<b)
+{
+outputs "k<b t";
+}
+else
+{
+outputs "k<b f";
+}
+
+if(k:b)
+{
+outputs "k:b t";
+}
+else
+{
+outputs "k:b f";
+}
+
+if(k^b)
+{
+outputs "k^b t";
+}
+else
+{
+outputs "k^b f";
+}
+
+if(k!b)
+{
+outputs "k!b t";
+}
+else
+{
+outputs "k!b f";
+}
+
+if(k~b)
+{
+outputs "k~b t";
+}
+else
+{
+outputs "k~b f";
+}
+}

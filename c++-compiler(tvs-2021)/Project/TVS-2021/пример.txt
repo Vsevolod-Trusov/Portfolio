@@ -1,0 +1,8 @@
+set vshort b1 = (5*(-25)/20);
+set boolean k = false;
+set string str = "Hello world";
+k = k ~(5>3);
+output k;
+
+
+ 

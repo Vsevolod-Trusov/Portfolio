@@ -1,0 +1,8 @@
+Program
+{
+set vshort _b1_b;
+$set vshort 123b;
+$set vshort 123b123;
+$set vshort 123 = 123;
+set vshort _123b123_123b123_;
+}

@@ -1,0 +1,23 @@
+vshort function func2(vshort c, vshort k)
+{
+retrieve c;
+}
+
+vshort function summa(vshort c, vshort k)
+{
+c= c+k;
+retrieve c;
+}
+
+Program
+{
+set vshort k = 5;
+k =  5*func2(k, 5)*5*func2(k, 5)*5*func2(k, 5);
+outputs k;
+k =  ((-summa(k,0))+10+summa(25, 25))/((-summa(5,5))*(summa(5, 5) % summa(1,2)));
+outputs k;
+}
+
+
+
+

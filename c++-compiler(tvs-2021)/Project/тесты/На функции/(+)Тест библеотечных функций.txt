@@ -1,0 +1,36 @@
+Program
+{
+outputs "----Тест StrLength----";
+set string s = "Seva!";
+outputs StrLength(s);
+set vshort c = StrLength(s);
+outputs c;
+outputs "----END----";
+
+outputs "----Тест Convert----";
+ s = "Seva123!";
+outputs Convert(s);
+c = Convert(s);
+outputs c;
+outputs "----END----";
+
+outputs "----Тест Compare----";
+ s = "Seva123!";
+set string s1 = "Seva123!";
+set string s3 = "HI!";
+outputs Compare(s, s1);
+outputs Compare(s, s3);
+set boolean k = Compare(s, s1);
+outputs k;
+k = Compare(s, s3);
+outputs k;
+outputs "----END----";
+outputs "----Output/outputs----";
+output s;
+outputs s;
+output c;
+outputs c;
+output k;
+outputs k;
+outputs "----END----";
+}

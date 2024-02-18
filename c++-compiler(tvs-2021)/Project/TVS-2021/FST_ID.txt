@@ -1,0 +1,257 @@
+#define FST_ID FST::FST(3,\
+	FST::NODE(250,\
+	FST::RELATION('_', 0),\
+	FST::RELATION('_', 1),\
+	FST::RELATION('a', 0),\
+	FST::RELATION('b', 0),\
+	FST::RELATION('c', 0),\
+	FST::RELATION('d', 0),\
+	FST::RELATION('e', 0),\
+	FST::RELATION('f', 0),\
+	FST::RELATION('g', 0),\
+	FST::RELATION('h', 0),\
+	FST::RELATION('i', 0),\
+	FST::RELATION('j', 0),\
+	FST::RELATION('k', 0),\
+	FST::RELATION('l', 0),\
+	FST::RELATION('m', 0),\
+	FST::RELATION('n', 0),\
+	FST::RELATION('o', 0),\
+	FST::RELATION('p', 0),\
+	FST::RELATION('q', 0),\
+	FST::RELATION('r', 0),\
+	FST::RELATION('s', 0),\
+	FST::RELATION('t', 0),\
+	FST::RELATION('u', 0),\
+	FST::RELATION('v', 0),\
+	FST::RELATION('w', 0),\
+	FST::RELATION('x', 0),\
+	FST::RELATION('y', 0),\
+	FST::RELATION('z', 0),\
+	FST::RELATION('а', 0),\
+	FST::RELATION('б', 0),\
+	FST::RELATION('в', 0),\
+	FST::RELATION('г', 0),\
+	FST::RELATION('д', 0),\
+	FST::RELATION('е', 0),\
+	FST::RELATION('ж', 0),\
+	FST::RELATION('з', 0),\
+	FST::RELATION('и', 0),\
+	FST::RELATION('й', 0),\
+	FST::RELATION('к', 0),\
+	FST::RELATION('л', 0),\
+	FST::RELATION('м', 0),\
+	FST::RELATION('н', 0),\
+	FST::RELATION('о', 0),\
+	FST::RELATION('п', 0),\
+	FST::RELATION('р', 0),\
+	FST::RELATION('с', 0),\
+	FST::RELATION('т', 0),\
+	FST::RELATION('у', 0),\
+	FST::RELATION('ф', 0),\
+	FST::RELATION('х', 0),\
+	FST::RELATION('ц', 0),\
+	FST::RELATION('ч', 0),\
+	FST::RELATION('ш', 0),\
+	FST::RELATION('щ', 0),\
+	FST::RELATION('ъ', 0),\
+	FST::RELATION('ы', 0),\
+	FST::RELATION('ь', 0),\
+	FST::RELATION('э', 0),\
+	FST::RELATION('ю', 0),\
+	FST::RELATION('я', 0),\
+	FST::RELATION('A', 0), \
+	FST::RELATION('B', 0), \
+	FST::RELATION('C', 0), \
+	FST::RELATION('D', 0), \
+	FST::RELATION('E', 0), \
+	FST::RELATION('F', 0), \
+	FST::RELATION('G', 0), \
+	FST::RELATION('H', 0), \
+	FST::RELATION('I', 0), \
+	FST::RELATION('J', 0), \
+	FST::RELATION('K', 0), \
+	FST::RELATION('L', 0), \
+	FST::RELATION('M', 0), \
+	FST::RELATION('N', 0), \
+	FST::RELATION('O', 0), \
+	FST::RELATION('P', 0), \
+	FST::RELATION('Q', 0), \
+	FST::RELATION('R', 0), \
+	FST::RELATION('S', 0), \
+	FST::RELATION('T', 0), \
+	FST::RELATION('U', 0), \
+	FST::RELATION('V', 0), \
+	FST::RELATION('W', 0), \
+	FST::RELATION('X', 0), \
+	FST::RELATION('Y', 0), \
+	FST::RELATION('Z', 0), \
+	FST::RELATION('А', 0), \
+	FST::RELATION('Б', 0), \
+	FST::RELATION('В', 0), \
+	FST::RELATION('Г', 0), \
+	FST::RELATION('Д', 0), \
+	FST::RELATION('Е', 0), \
+	FST::RELATION('Ж', 0), \
+	FST::RELATION('З', 0), \
+	FST::RELATION('И', 0), \
+	FST::RELATION('Й', 0), \
+	FST::RELATION('К', 0), \
+	FST::RELATION('Л', 0), \
+	FST::RELATION('М', 0), \
+	FST::RELATION('Н', 0), \
+	FST::RELATION('О', 0), \
+	FST::RELATION('П', 0), \
+	FST::RELATION('Р', 0), \
+	FST::RELATION('С', 0), \
+	FST::RELATION('Т', 0), \
+	FST::RELATION('У', 0), \
+	FST::RELATION('Ф', 0), \
+	FST::RELATION('Х', 0), \
+	FST::RELATION('Ц', 0), \
+	FST::RELATION('Ч', 0), \
+	FST::RELATION('Ш', 0), \
+	FST::RELATION('Щ', 0), \
+	FST::RELATION('Ъ', 0), \
+	FST::RELATION('Ы', 0), \
+	FST::RELATION('Ь', 0), \
+	FST::RELATION('Э', 0), \
+	FST::RELATION('Ю', 0), \
+	FST::RELATION('Я', 0), \
+	FST::RELATION('a', 1), \
+	FST::RELATION('b', 1), \
+	FST::RELATION('c', 1), \
+	FST::RELATION('d', 1), \
+	FST::RELATION('e', 1), \
+	FST::RELATION('f', 1), \
+	FST::RELATION('g', 1), \
+	FST::RELATION('h', 1), \
+	FST::RELATION('i', 1), \
+	FST::RELATION('j', 1), \
+	FST::RELATION('k', 1), \
+	FST::RELATION('l', 1), \
+	FST::RELATION('m', 1), \
+	FST::RELATION('n', 1), \
+	FST::RELATION('o', 1), \
+	FST::RELATION('p', 1), \
+	FST::RELATION('q', 1), \
+	FST::RELATION('r', 1), \
+	FST::RELATION('s', 1), \
+	FST::RELATION('t', 1), \
+	FST::RELATION('u', 1), \
+	FST::RELATION('v', 1), \
+	FST::RELATION('w', 1), \
+	FST::RELATION('x', 1), \
+	FST::RELATION('y', 1), \
+	FST::RELATION('z', 1), \
+	FST::RELATION('а', 1), \
+	FST::RELATION('б', 1), \
+	FST::RELATION('в', 1), \
+	FST::RELATION('г', 1), \
+	FST::RELATION('д', 1), \
+	FST::RELATION('е', 1), \
+	FST::RELATION('ж', 1), \
+	FST::RELATION('з', 1), \
+	FST::RELATION('и', 1), \
+	FST::RELATION('й', 1), \
+	FST::RELATION('к', 1), \
+	FST::RELATION('л', 1), \
+	FST::RELATION('м', 1), \
+	FST::RELATION('н', 1), \
+	FST::RELATION('о', 1), \
+	FST::RELATION('п', 1), \
+	FST::RELATION('р', 1), \
+	FST::RELATION('с', 1), \
+	FST::RELATION('т', 1), \
+	FST::RELATION('у', 1), \
+	FST::RELATION('ф', 1), \
+	FST::RELATION('х', 1), \
+	FST::RELATION('ц', 1), \
+	FST::RELATION('ч', 1), \
+	FST::RELATION('ш', 1), \
+	FST::RELATION('щ', 1), \
+	FST::RELATION('ъ', 1), \
+	FST::RELATION('ы', 1), \
+	FST::RELATION('ь', 1), \
+	FST::RELATION('э', 1), \
+	FST::RELATION('ю', 1), \
+	FST::RELATION('я', 1), \
+	FST::RELATION('A', 1), \
+	FST::RELATION('B', 1), \
+	FST::RELATION('C', 1), \
+	FST::RELATION('D', 1), \
+	FST::RELATION('E', 1), \
+	FST::RELATION('F', 1), \
+	FST::RELATION('G', 1), \
+	FST::RELATION('H', 1), \
+	FST::RELATION('I', 1), \
+	FST::RELATION('J', 1), \
+	FST::RELATION('K', 1), \
+	FST::RELATION('L', 1), \
+	FST::RELATION('M', 1), \
+	FST::RELATION('N', 1), \
+	FST::RELATION('O', 1), \
+	FST::RELATION('P', 1), \
+	FST::RELATION('Q', 1), \
+	FST::RELATION('R', 1), \
+	FST::RELATION('S', 1), \
+	FST::RELATION('T', 1), \
+	FST::RELATION('U', 1), \
+	FST::RELATION('V', 1), \
+	FST::RELATION('W', 1), \
+	FST::RELATION('X', 1), \
+	FST::RELATION('Y', 1), \
+	FST::RELATION('Z', 1), \
+	FST::RELATION('А', 1), \
+	FST::RELATION('Б', 1), \
+	FST::RELATION('В', 1), \
+	FST::RELATION('Г', 1), \
+	FST::RELATION('Д', 1), \
+	FST::RELATION('Е', 1), \
+	FST::RELATION('Ж', 1), \
+	FST::RELATION('З', 1), \
+	FST::RELATION('И', 1), \
+	FST::RELATION('Й', 1), \
+	FST::RELATION('К', 1), \
+	FST::RELATION('Л', 1), \
+	FST::RELATION('М', 1), \
+	FST::RELATION('Н', 1), \
+	FST::RELATION('О', 1), \
+	FST::RELATION('П', 1), \
+	FST::RELATION('Р', 1), \
+	FST::RELATION('С', 1), \
+	FST::RELATION('Т', 1), \
+	FST::RELATION('У', 1), \
+	FST::RELATION('Ф', 1), \
+	FST::RELATION('Х', 1), \
+	FST::RELATION('Ц', 1), \
+	FST::RELATION('Ч', 1), \
+	FST::RELATION('Ш', 1), \
+	FST::RELATION('Щ', 1), \
+	FST::RELATION('Ъ', 1), \
+	FST::RELATION('Ы', 1), \
+	FST::RELATION('Ь', 1), \
+	FST::RELATION('Э', 1), \
+	FST::RELATION('Ю', 1), \
+	FST::RELATION('Я', 1), \
+	FST::RELATION('0', 1),\
+	FST::RELATION('1', 1),\
+	FST::RELATION('2', 1),\
+	FST::RELATION('3', 1),\
+	FST::RELATION('4', 1),\
+	FST::RELATION('5', 1),\
+	FST::RELATION('6', 1),\
+	FST::RELATION('7', 1),\
+	FST::RELATION('8', 1),\
+	FST::RELATION('9', 1),\
+	FST::RELATION('1', 2),\
+	FST::RELATION('2', 2),\
+	FST::RELATION('3', 2),\
+	FST::RELATION('4', 2),\
+	FST::RELATION('5', 2),\
+	FST::RELATION('6', 2),\
+	FST::RELATION('7', 2),\
+	FST::RELATION('8', 2),\
+	FST::RELATION('9', 2)\
+	),\
+	FST::NODE())

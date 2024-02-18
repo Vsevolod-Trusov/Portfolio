@@ -1,0 +1,33 @@
+/ =============############    Таблица идентификаторов   ############======================================== /
+index                name         Number of parameters      scope      type   id type      lexTable index              Value
+   0             factorial               1                             vsh       f               2                       -
+   1             parameter               -              factorial      vsh       p               5                       -
+   2                     j               -              factorial      vsh       v              10                       0 
+   3                    L0               -                             vsh       l              12                       1
+   4                result               -              factorial      vsh       v              16                       0 
+   5               Program               0                             vsh       f              44                       -
+   6                number               -                Program      vsh       v              48                       0 
+   7             remainder               -                Program      vsh       v              54                       0 
+   8                    L1               -                             vsh       l              56                       0
+   9              counter1               -                Program      vsh       v              60                       0 
+  10                    L2               -                             str       l              65                      {39}"Первые 10 нечетных чисел, начиная с 1: "
+  11                    L3               -                             vsh       l              71                      10
+  12                    L4               -                             vsh       l              77                       2
+  13                    L5               -                             str       l              91                      {1}" "
+  14                    L6               -                             vsh       l             125                       3
+  15                Fruit1               -                             str       v             133                      {0}""
+  16                    L7               -                             str       l             135                      {6}"Яблоко"
+  17                Fruit2               -                             str       v             139                      {0}""
+  18                    L8               -                             str       l             141                      {5}"Банан"
+  19                Fruit3               -                             str       v             145                      {0}""
+  20        counter_apples               -                             vsh       v             151                       0 
+  21       counter_bananas               -                             vsh       v             157                       0 
+  22               Compare               2                             bol       f             163                       -
+  23                    L9               -                             str       l             264                      {18}"Количество яблок: "
+  24                   L10               -                             str       l             270                      {20}"Количество бананов: "
+  25                   L11               -                             str       l             283                      {22}"Длина слова 'Яблоко': "
+  26             StrLength               1                             vsh       f             287                       -
+  27                   L12               -                             str       l             294                      {21}"Длина слова 'Банан': "
+  28               number2               -              StrLength      vsh       v             304                       0 
+  29                   L13               -                             vsh       l             306                       7
+  30                   L14               -                             str       l             315                      {13}"Факториал 7: "

@@ -1,0 +1,23 @@
+Program
+{
+set vshort b = 5;
+set vshort k = 1;
+set vshort c = 0;
+
+Round(k<b)
+{
+c = k%2;
+if(c~0){
+output "к четное: ";
+outputs k;
+}
+if(c!0)
+{
+output "к нечетное: ";
+outputs k;
+}
+k = k +1;
+}
+}
+
+

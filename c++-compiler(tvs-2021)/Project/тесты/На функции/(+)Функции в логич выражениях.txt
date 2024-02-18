@@ -1,0 +1,25 @@
+vshort function fun123(vshort c)
+{
+retrieve c;
+}
+Program
+{
+set string name = "Vsevolod";
+set string surname = "Trusov";
+set boolean bol;
+
+output " Compare(name, surname)~true : ";
+ bol = Compare(name,surname)~true;
+outputs bol;
+output " Compare(name, surname)~false: ";
+bol = Compare(name, surname)~false;
+outputs bol;
+
+bol = fun123(1)>fun123(2);
+output "fun123(1)>fun123(2): ";
+outputs bol;
+bol = fun123(1)<fun123(2);
+output "fun123(1)<fun123(2): ";
+outputs bol;
+
+}

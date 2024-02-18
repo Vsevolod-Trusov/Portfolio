@@ -1,0 +1,16 @@
+Program
+{
+set vshort b = 5;
+set vshort k = 1;
+set vshort c = 0;
+
+Round(k<b)
+{
+Round(c<b)
+{
+c = c+ 1;
+}
+k = k +1;
+}
+
+}

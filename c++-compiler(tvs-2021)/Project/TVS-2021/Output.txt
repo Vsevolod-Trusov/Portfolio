@@ -1,0 +1,49 @@
+if (lextable.table[i + 1].lexema == LEX_ID) {
+					if (idtable.table[lextable.table[i + 1].idxTI].iddatatype == IT::IDDATATYPE::VSH) {
+						if (lextable.table[i + 1].sign == '-')
+						{
+							out << "\tpush\t\t" << idtable.table[lextable.table[i + 1].idxTI].scope
+								<< idtable.table[lextable.table[i + 1].idxTI].id;
+							out << "\n\tpop\t\tax\n";
+							out << "\tneg\t\tax\n";
+							out << "\tpush\t\tax\n";
+						}
+						else
+						out << "\tpush\t\t" << idtable.table[lextable.table[i + 1].idxTI].scope
+							<< idtable.table[lextable.table[i + 1].idxTI].id;
+						out << "\n\tcall\t\tOutVShort\n\n";
+					}
+					else if (idtable.table[lextable.table[i + 1].idxTI].iddatatype == IT::IDDATATYPE::BOL) {
+						out << "\tpush\t\t" << idtable.table[lextable.table[i + 1].idxTI].scope
+							<< idtable.table[lextable.table[i + 1].idxTI].id;
+						out << "\n\tcall\t\tOutBoolean\n\n";
+					}
+					else {
+						out << "\tpush\t\t" << idtable.table[lextable.table[i + 1].idxTI].scope
+							<< idtable.table[lextable.table[i + 1].idxTI].id;
+						out << "\n\tcall\t\tOutString\n\n";
+					}
+				}
+				else if (lextable.table[i + 1].lexema == LEX_LITERAL) {
+					if (idtable.table[lextable.table[i + 1].idxTI].iddatatype == IT::IDDATATYPE::VSH) {
+						if (lextable.table[i + 1].sign == '-')
+						{
+							out << "\tpush\t\t" << idtable.table[lextable.table[i + 1].idxTI].id;
+							out << "\n\tpop\t\tax\n";
+							out << "\tneg\t\tax\n";
+							out << "\tpush\t\tax\n";
+						}
+						else
+							out << "\tpush\t\t" << idtable.table[lextable.table[i + 1].idxTI].id;
+						
+						out << "\n\tcall\t\tOutVShort\n\n";
+					}
+					else if (idtable.table[lextable.table[i + 1].idxTI].iddatatype == IT::IDDATATYPE::BOL) {
+						out << "\tpush\t\t" << idtable.table[lextable.table[i + 1].idxTI].id;
+						out << "\n\tcall\t\tOutBoolean\n\n";
+					}
+					else {
+						out << "\tpush\t\toffset " << idtable.table[lextable.table[i + 1].idxTI].id;
+						out << "\n\tcall\t\tOutString\n\n";
+					}
+				}

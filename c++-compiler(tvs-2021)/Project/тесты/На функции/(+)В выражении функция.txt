@@ -1,0 +1,11 @@
+vshort function func1(vshort par)
+{
+par = par + 5;
+retrieve par;
+}
+Program
+{
+set vshort s = 3;
+set vshort res = (5 * (-func1(s)))/(func1(5)+1);
+output res;
+}

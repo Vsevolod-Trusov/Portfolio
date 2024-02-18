@@ -1,0 +1,49 @@
+boolean function f(boolean b)
+{
+output b;
+output b;
+retrieve b;
+}
+vshort function fl(vshort a)
+{
+if(true)
+{
+output a;
+}
+else
+{
+output 2;
+}
+ retrieve 2;
+}
+vshort function Length(string element1)
+{
+output element1;
+retrieve 5;
+}
+vshort function myfunc(string element1,string  element2, boolean b1,string element3, string element4, boolean b2,string element5, string element6, boolean b3,string element7, string element8, boolean b4)
+{
+retrieve 5;
+}
+Program()
+{
+set string element1 = "HELLO";
+ set vshort element2 = Length(element1);			
+ set boolean value = f(true);	
+ set boolean b1 = true;
+if(b1~true)
+{
+b1 = false;
+}
+else
+{
+b1 = true;
+}
+ set vshort test = (fl(2)*fl(2)/fl(1)%fl(2))-fl(2);
+ set vshort res=((fl(2)*(fl(2)/5))*((12-44)/100))%((1000-fl(2)*2)+25-10);	
+ $b1 = (4>12)~(((5/2)!4)~true);	
+ b1 = 5!4;	
+ b1 = 5<4;	
+ set vshort res2 = myfunc(element1, element1, b1,element1, element1, b1,element1, element1, b1,element1, element1, b1)/5;
+ set string element3  = "1209Hello 4457865 World_ >< ~ :^  $#(3+5/2*x)%2 = 10 !"; 
+}

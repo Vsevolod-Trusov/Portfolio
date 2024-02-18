@@ -1,0 +1,24 @@
+vshort function fun2(vshort l)
+{
+l = l * (-1);
+retrieve l;
+}
+vshort function f(string sk)
+{
+set vshort k1;
+set vshort k2;
+k1 = StrLength(sk);
+k2 = fun2(k1);
+retrieve k2;
+}
+
+Program
+{
+set string s = "Seva!";
+set vshort c;
+c = f(s);
+outputs c;
+outputs "----END----";
+
+
+}

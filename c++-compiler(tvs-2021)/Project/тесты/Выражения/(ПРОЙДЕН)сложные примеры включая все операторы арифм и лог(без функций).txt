@@ -1,0 +1,136 @@
+Program
+{
+set vshort s = 0;
+set vshort a = 5;
+set vshort b = 12;
+set vshort c = 20;
+set vshort d = 40;
+
+output "Используя только переменные:";
+output "a:";
+output a;
+output "b:";
+output b;
+output "c:";
+output c;
+output "d:";
+output d;
+output "a+a+a+a";
+s = a+a+a+a;
+output s;
+
+output "a-a-a-a";
+s = a-a-a-a;
+output s;
+
+output "a*a*a*a";
+s = a*a*a*a;
+output s;
+
+output "a/a/a/a";
+s = a/a/a/a;
+output s;
+
+output "a%a%a%a%a";
+s = a%a%a%a%a;
+output s;
+
+output "b % a:";
+s= b % a;
+output s;
+s= (-b) % a;
+output s;
+s= b % (-a);
+output s;
+s= (-b) %(-a);
+output s;
+output "(-5)%4";
+s =(-5)%4;
+output s;
+ 
+output "(a +b)*(a-b)*(a%b)/(a+b-c*d)";
+s = (a +b)*(a-b)*(a%b)/(a+b-c*d);
+output s;
+output "a*b+b/d-c%a";
+s = a*b+b/d-c%a;
+output s;
+
+output "(1 +2)*((-1)-2)*(3%2)/(1+(-2)-5*2)";
+s = (1 +2)*((-1)-2)*(3%2)/(1+(-2)-5*2);
+output s;
+output "1*(-5)+10/2";
+s = 1*(-5)+10/2;
+output s;
+
+output "a*(-5)+b/2-(c)*d%4";
+s = a*(-5)+b/2-(c)*d%4;
+output s;
+
+output "(((-5)*1000)-222)/(25+6)";
+s = (((-5)*1000)-222)/(25+6);
+output s;
+
+output "Логические выражения:";
+
+set boolean res; 
+set vshort j = 5;
+set vshort l = 4;
+
+set boolean t = true;
+set boolean f = false;
+output "j:";
+output j;
+output "l:";
+output l;
+output "t:";
+output t;
+output "f:";
+output f;
+output "(l>j)~t";
+res = (l>j)~t;
+output res;
+output "(l>j)~f";
+res = (l>j)~f;
+output res;
+
+output "(j:l)~(l:j)";
+res = (j:l)~(l:j);
+output res;
+output "(j:l)!(l:j)";
+res = (j:l)!(l:j);
+output res;
+output "(j<l)~(l>j)";
+res = (j<l)~(l>j);
+output res;
+output "(j:l)~(l^j)";
+res = (j:l)~(l^j);
+output res;
+
+output "true~false";
+res = true~false;
+output res;
+
+output "(5:6/2)~true";
+res = (5:6/2)~true;
+output res;
+
+output "(-6)>2";
+res = (-6)>2;
+output res;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+}

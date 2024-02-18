@@ -1,0 +1,19 @@
+num PROC numc: SWORD
+	mov		ax, numc
+	ret		4
+num ENDP
+main PROC
+	push		L0
+	pop			Programb
+
+	push		Programb
+	call		num
+	push		ax
+	pop			Programa
+
+	push		Programa
+	call		OutVShort
+	push		0
+	call		ExitProcess
+main ENDP
+end main

@@ -1,0 +1,30 @@
+
+vshort function f(string sk)
+{
+set string str = "Seva12312312!";
+set string str2 = "Hello";
+set vshort len = StrLength(str);
+set vshort k = Convert(str);
+set boolean cmp= Compare(str, str2);
+outputs k;
+outputs cmp;
+if(len > 10)
+{
+output "слово больше 10ти символов";
+}
+else
+{
+output "слово меньше 10ти символов";
+}
+retrieve 0;
+}
+
+Program
+{
+set string s = "Seva!";
+set vshort c;
+c = f(s);
+outputs "----END----";
+
+
+}

@@ -1,0 +1,19 @@
+Program()
+{
+set vshort a = 5;
+set vshort b = 10;
+
+b = b*(-1);
+output b;
+set vshort point = 50;
+if(b>0)
+{
+output "b положительное";
+}
+else 
+{
+output "b отрицательное";
+}
+
+
+}

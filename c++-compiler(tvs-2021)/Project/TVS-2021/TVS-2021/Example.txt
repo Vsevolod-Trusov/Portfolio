@@ -1,0 +1,105 @@
+vshort function factorial(vshort parameter)
+{
+set vshort j = 1;
+set vshort result =1;
+Round(j^parameter){
+result = result * j;
+j = j+1;
+}
+retrieve result;
+}
+
+Program
+{
+
+$Task1: Вывести первые 10 нечетных натуралных чисел
+$И вывести 3 первых отрицателных числа
+
+set vshort number = 1;
+set vshort remainder = 0;
+set vshort counter1 = 0;
+
+outputs "Первые 10 нечетных чисел, начиная с 1: ";
+Round(counter1^10) 
+{
+remainder = number%2;
+if(remainder~1)
+{
+output number;
+output " ";
+counter1 = counter1 + 1;
+}
+number = number + 1;
+}
+
+outputs " ";
+output (-1);
+output " ";
+output (-2);
+output " ";
+output (-3);
+outputs " ";
+$Task1 конец
+
+$Task2 Даны 3 названий фруктов,
+$посчитать сколько Яблок, Бананов
+$Сравнить какое слово длинее Яблоко или Банан
+set string Fruit1 = "Яблоко";
+set string Fruit2 = "Банан";
+set string Fruit3 = "Яблоко";
+set vshort counter_apples = 0;
+set vshort counter_bananas = 0;
+
+if(Compare(Fruit1, "Яблоко"))
+{
+counter_apples = counter_apples + 1;
+}
+if(Compare(Fruit2, "Яблоко"))
+{
+counter_apples = counter_apples + 1;
+}
+if(Compare(Fruit3,"Яблоко"))
+{
+ counter_apples = counter_apples + 1;
+}
+if(Compare(Fruit1, "Банан"))
+{
+counter_bananas = counter_bananas + 1;
+}
+if(Compare(Fruit2, "Банан"))
+{
+counter_bananas = counter_bananas + 1;
+}
+if(Compare(Fruit3,"Банан"))
+{
+counter_bananas = counter_bananas + 1;
+}
+
+output "Количество яблок: ";
+outputs counter_apples ;
+output "Количество бананов: ";
+outputs counter_bananas ;
+
+if( counter_apples > counter_bananas )
+{
+output "Длина слова 'Яблоко': ";
+outputs  StrLength("Яблоко");
+}
+else
+{
+output "Длина слова 'Банан': ";
+outputs  StrLength(Fruit2);
+}
+
+$Task2 конец
+
+$Task3 Посчитать факториал 7
+
+set vshort number2 = 7;
+number2 = factorial(number2);
+output "Факториал 7: ";
+outputs number2;
+
+$Task3 конец
+
+}

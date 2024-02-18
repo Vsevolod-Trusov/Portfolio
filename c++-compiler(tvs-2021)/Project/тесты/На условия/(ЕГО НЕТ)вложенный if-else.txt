@@ -1,0 +1,30 @@
+Program
+{
+set vshort b = 0;
+set vshort k = 3;
+b = k%2;
+if(k>0)
+{
+output "k положителное->";
+if(b~0)
+{
+output "k четное.";
+}
+else
+{
+output "k нечетное.";
+}
+}
+else
+{
+output "k отрицательное->";
+if(b~0)
+{
+output "k четное.";
+}
+else
+{
+output "k нечетное.";
+}
+}
+}

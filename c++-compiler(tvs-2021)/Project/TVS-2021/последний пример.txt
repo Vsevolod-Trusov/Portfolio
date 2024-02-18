@@ -1,0 +1,48 @@
+vshort function increment(vshort par)
+{
+par = par + 1;
+retrieve par;
+}
+
+Program
+{
+set string str ="Hello";
+set string str2 ="Hello";
+
+set vshort k1 = (((-5)*1000)-222)/(25+6);
+output k1;
+
+set vshort i = 0;
+set vshort k;
+output "---Начало цикла---";
+set vshort j =  1;
+Round(i<2)
+{
+j = 1;
+output "i:";
+output i;
+k = i%2;
+if(k~0)
+{
+output "Четное";
+}
+else
+{
+output "Нечетное";
+}
+i = i + 1;
+}
+output "---Конец цикла---";
+
+if(Compare(str,str2))
+{
+output "Строки эквиваленты";
+}
+else
+{
+output "Строки не эквиваленты";
+}
+
+output Convert(str);
+output StrLength(str);
+}

@@ -1,0 +1,29 @@
+boolean function duck(boolean s)
+{
+if(s)
+{
+s = false;
+set boolean c = duck(s);
+output "Да";
+}
+else{
+output "Нет";
+}
+retrieve s;
+}
+ 
+Program()
+{
+set vshort s1 =5;
+output s1;
+if(duck(true))
+{
+output "true";
+}
+else 
+{
+output "false ";
+}
+
+
+}

@@ -1,0 +1,18 @@
+vshort function func2(string b, vshort c, boolean g)
+{
+outputs b;
+outputs c;
+outputs g;
+retrieve c;
+}
+Program
+{
+set vshort k = 5;
+set string p = "End!";
+set boolean l = true;
+outputs func2("Hello!", 5, false);
+outputs func2(p, k, l);
+outputs "--------";
+k = (-5) + func2(p, k, false);
+outputs k;
+}
