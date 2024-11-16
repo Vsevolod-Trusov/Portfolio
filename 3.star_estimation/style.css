@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 15px;
+  text-align: center;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.star-rating-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.fa-star-o::before {
+  content: "\f006";
+  font-size: 2.5rem;
+}
+
+.selected-rating-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.selected-rating-container p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.fa-star:hover {
+  cursor: pointer;
+}
+
+.fa-star::before {
+  content: "\f005";
+  color: rgb(233, 233, 31);
+  font-size: 2.5rem;
+}
+
+.flush-btn {
+  margin-top: 20px;
+  padding: 10px 30px;
+  background-color: rgb(46, 166, 166);
+  font-size: 1.5rem;
+}

@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 15px;
+}
+
+.users-list .hide-users-list {
+  display: none;
+}
+
+.loader .show-loader {
+  display: block;
+}

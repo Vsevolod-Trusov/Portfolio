@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #cbc7c7;
+  padding: 15px;
+}
+
+.loading-text {
+  display: none;
+}
+
+.loading-text.show {
+  display: block;
+}
+
+.github-profile-details.hide {
+  display: none;
+}

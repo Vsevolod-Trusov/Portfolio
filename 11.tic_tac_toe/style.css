@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+.board {
+  margin: 30px auto;
+  width: 450px;
+  height: 450px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.square {
+  width: 145px;
+  height: 145px;
+  border: 1px solid rgb(0, 26, 255);
+  background-color: rgb(216, 206, 206);
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.restart-button {
+  display: block;
+  margin: 0 auto;
+  padding: 14px 20px;
+  border: 2px solid black;
+  background-color: rgb(72, 255, 0);
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.message {
+  font-size: 2rem;
+  text-align: center;
+  margin: 14px 0;
+}
